@@ -24,12 +24,12 @@ header table tr td {
   text-align: left;
 }
 header table tr td img {
-  width: 40px;
+  width: 100px;
   height: auto;
 }
 nav {
   width: 100%;
-  text-align: center;
+  text-align: right;
 }
 nav a {
   color: #fff;
@@ -66,25 +66,66 @@ nav a {
   font-size: 26px;
   transition: 0.4s ease-in-out;
 }
-
+#about {
+  padding: 5vh;
+  height: 68.5vh;
+  margin:  0 auto;
+  background-image: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)
+  );
+  transition: 0.4s ease-in-out;
+}
+#card {
+  display: flex;
+  position: relative;
+  width: 80vw;
+  margin: auto;
+  height: 50vh;
+  z-index: 1;
+  align-items: center;
+  border-radius: 12px;
+  background-image: linear-gradient(
+    0deg,
+    rgba(18, 18, 18, 1),
+    rgba(18, 18, 18, 1)
+  );
+  transition: opacity 0.75s ease 0s,transform 0.75s ease 0s;
+}
 #col-a {
   display: block;
   position: relative;
+  height: 100%;
   float: left;
   width: 50%;
   margin-top: 0;
   border-left: 10px;
 }
-
+#col-a img {
+  border-radius: 12px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 #col-b {
   display: block;
   position: relative;
+  height: 100%;
   float: left;
   width: 50%;
   margin-top: 0;
   border-right: 10px;
 }
-
+br {
+  display: block;
+  margin-bottom: 2em;
+  background-image: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)
+  );
+}
 footer {
   width: 98%;
   padding-left: 1%;
