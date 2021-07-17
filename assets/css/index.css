@@ -68,8 +68,6 @@ nav a {
 }
 #about {
   padding: 5vh;
-  height: 68.5vh;
-  margin:  0 auto;
   background-image: linear-gradient(
     0deg,
     rgba(0, 0, 0, 0.5),
@@ -79,19 +77,10 @@ nav a {
 }
 #card {
   display: flex;
-  position: relative;
-  width: 80vw;
-  margin: auto;
-  height: 50vh;
-  z-index: 1;
-  align-items: center;
-  border-radius: 12px;
-  background-image: linear-gradient(
-    0deg,
-    rgba(18, 18, 18, 1),
-    rgba(18, 18, 18, 1)
-  );
-  transition: opacity 0.75s ease 0s,transform 0.75s ease 0s;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: row;
 }
 #col-a {
   display: block;
@@ -103,19 +92,23 @@ nav a {
   border-left: 10px;
 }
 #col-a img {
-  border-radius: 12px;
+  border-radius: 20px;
   display: block;
+  width: auto;
   margin-left: auto;
   margin-right: auto;
 }
 #col-b {
   display: block;
   position: relative;
-  height: 100%;
+  height: auto;
   float: left;
   width: 50%;
   margin-top: 0;
   border-right: 10px;
+  background-color: #121212;
+  border-radius: 13px;
+  border-left: 30px solid #121212;
 }
 br {
   display: block;
@@ -132,7 +125,12 @@ footer {
   padding-right: 1%;
   color: #fff;
   bottom: 0;
-  position: fixed;
+  transition: 0.4s ease-in-out;
+  background-image: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)
+  );
 }
 
 #phone {
@@ -172,6 +170,10 @@ footer {
 ::-webkit-scrollbar-thumb {
   background: #fff;
 }
+@media (max-width: 1000px) {
+  #card #col-a #col-b {
+  }
+}
 @media (max-width: 900px) {
   #top-part {
     width: 90vw;
@@ -182,8 +184,8 @@ footer {
     height: 70vh;
     background-image: linear-gradient(
       0deg,
-      rgba(0, 0, 0, 0.7),
-      rgba(0, 0, 0, 0.7)
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
     );
   }
   #top-part b {
