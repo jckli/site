@@ -2,7 +2,7 @@ html {
     font-size: 18px;
 }
 body {
-    font-family: Lato;
+    font-family: 'Lato', sans-serif;
     background: #101010;
 }
 a {
@@ -14,7 +14,7 @@ a {
 #title h1 {
     font-size: 2em;
     color: #FFFFFF;
-    font-family: Fira Mono;
+    font-family: 'Fira Mono', monospace;
 }
 #intro {
     min-height: 600px;
