@@ -182,3 +182,20 @@ a:hover {
     color: #FFFFFF;
     font-family: Fira Mono;
 }
+
+
+
+
+#footer > div {
+    font-family: 'Fira Mono', monospace;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+}
+#footer > div > div {
+    color: #888;
+    font-size: 14px;
+}
