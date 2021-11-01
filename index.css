@@ -10,6 +10,11 @@ body {
 a {
     color: #9684f8;
 }
+a:hover {
+    color: #c9bfff;
+    transition: 100ms ease-out color;
+    text-decoration: none;
+}
 .container {
     display: block;
 }
@@ -19,7 +24,7 @@ a {
     font-family: 'Fira Mono', monospace;
 }
 #intro {
-    min-height: 600px;
+    min-height: 650px;
     padding: 60px 0;
     align-items: center;
     justify-content: center;
@@ -99,6 +104,7 @@ a {
     justify-content: flex-end;
     align-items: center;
     display: flex;
+    margin-bottom: 30px;
 }
 #projects > #p > .row > .card > .info {
     padding: 30px 40px;
@@ -147,4 +153,32 @@ a {
     font-size: 24px;
     vertical-align: middle;
     color: #e0e0e0;
+}
+#projects > #p > .row > .card > .info > .buttons > .disabled {
+    cursor: default;
+    pointer-events: none;
+    opacity: .3;
+}
+#projects > #p > .other-projects {
+    display: block;
+    font-size: 18px;
+    text-align: center;
+    color: #888;
+}
+#third {
+    background: #080808;
+}
+#skills {
+    margin: 0 auto;
+    max-width: 950px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+#skills > #s {
+    margin: 0 -20;
+}
+#skills h2 {
+    font-size: 1.5em;
+    color: #FFFFFF;
+    font-family: Fira Mono;
 }
