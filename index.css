@@ -170,17 +170,31 @@ a:hover {
 }
 #skills {
     margin: 0 auto;
-    max-width: 950px;
     padding-top: 40px;
     padding-bottom: 40px;
+    background: #080808;
+    max-width: 950px;
 }
-#skills > #s {
-    margin: 0 -20;
+#skills > .title {
+    margin: 0 auto;
+    max-width: 950px;
 }
-#skills h2 {
+#skills > .title > h2 {
     font-size: 1.5em;
     color: #FFFFFF;
     font-family: Fira Mono;
+}
+#skills > .row {
+    margin: 0 -20;
+}
+#skills > .row > .col > h1 {
+    font-size: 24px;
+    color: #888;
+}
+#skills > .row > .col > ul {
+    padding-left: 18px;
+    color: #888;
+    font-size: 16px;
 }
 #footer > div {
     font-family: 'Fira Mono', monospace;
@@ -189,7 +203,7 @@ a:hover {
     align-items: center;
     display: flex;
     flex-direction: row;
-    justify-content:space-between;
+    justify-content: space-between;
 }
 #footer > div > div {
     color: #888;
