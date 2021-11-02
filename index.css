@@ -17,6 +17,7 @@ a:hover {
 }
 .container {
     display: block;
+    padding: 0 40px;
 }
 #title h1 {
     font-size: 2em;
@@ -40,7 +41,6 @@ a:hover {
 }
 #title > .name {
     display: inline-block;
-    margin-right: 394px;
 }
 #title > .name > #main-bio {
     color: #5e5e5e;
@@ -49,6 +49,7 @@ a:hover {
 }
 #title > img {
     display: inline-block;
+    margin-left: 394px;
     vertical-align: top;
     height: 80px;
     margin-top: 4px;
@@ -82,7 +83,7 @@ a:hover {
 }
 #projects {
     margin: 0 auto;
-    max-width: 950px;
+    max-width: 1000px;
     padding-top: 40px;
     padding-bottom: 40px;
 }
@@ -102,9 +103,11 @@ a:hover {
 #projects > #p > .row > .card {
     background-color: #101010;
     justify-content: flex-end;
+    border-radius: 12px;
     align-items: center;
     display: flex;
     margin-bottom: 30px;
+    min-height: auto;
 }
 #projects > #p > .row > .card > .info {
     padding: 30px 40px;
@@ -173,7 +176,7 @@ a:hover {
     padding-top: 40px;
     padding-bottom: 40px;
     background: #080808;
-    max-width: 950px;
+    max-width: 1000px;
 }
 #skills > .title {
     margin: 0 auto;
@@ -184,17 +187,51 @@ a:hover {
     color: #FFFFFF;
     font-family: Fira Mono;
 }
-#skills > .row {
+#skills > .full > .row {
     margin: 0 -20;
 }
-#skills > .row > .col > h1 {
+#skills > .full > .row > .col > h1 {
     font-size: 24px;
     color: #888;
 }
-#skills > .row > .col > ul {
+#skills ul {
     padding-left: 18px;
     color: #888;
     font-size: 16px;
+}
+#skills > .condense {
+    display: none;
+}
+#skills > .condense > .row {
+    justify-content: center;
+}
+#skills > .condense > .row > .col-4 {
+    max-width: 150px;
+}
+#skills > .condense > .row > .col-4 > .list-group > a {
+    padding: 9px 12px;
+    color: #888;
+    border: 1px solid #888;
+    background: #080808;
+    border-radius: 10px;
+    margin-bottom: 6px;
+}
+#skills > .condense > .row > .col-4 > .list-group > .active {
+    color: rgb(228, 228, 228);
+    background: #101010;
+    border: 1px solid rgb(228, 228, 228);
+    transition: 200ms ease-out background,200ms ease-out border,200ms ease-out color;
+}
+
+#skills > .condense > .row > .col-4 > .list-group > a:hover {
+    background: #f3f3f3;
+    border: 1px solid #888;
+    color: rgb(68, 68, 68);
+    transition: 200ms ease-out background,200ms ease-out border,200ms ease-out color;
+    text-decoration: none;
+}
+#skills > .condense > .row > .col-8 {
+    max-width: 200px;
 }
 #footer > div {
     font-family: 'Fira Mono', monospace;
@@ -208,4 +245,40 @@ a:hover {
 #footer > div > div {
     color: #888;
     font-size: 14px;
+}
+@media (max-width: 900px) {
+    #projects > #p > .row {
+        display: block;
+    }
+    #title > img {
+        display: none;
+    }
+    #skills > .full {
+        display: none;
+    }
+    #skills > .condense {
+        display: block;
+    }
+}
+@media (max-width: 675px) {
+    #footer > div {
+        display: block;
+        text-align: center;
+    }
+    #footer > .container > .first {
+        display: none;
+    }
+    #skills > .row {
+        display: block;
+    }
+}
+@media (max-width: 500px) {
+    #skills > .condense > .row > .col-4 > .list-group {
+        margin-bottom: 10px;
+    }
+}
+@media (max-width: 425px) {
+    #title > .contact-info > a > span {
+        display: none;
+    }
 }
