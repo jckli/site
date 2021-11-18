@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+body {
+    font-family: 'Lato', sans-serif;
+    background: #101010;
+}
+.container {
+    display: block;
+    padding: 0 40px;
+}
+#content {
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    display: flex;
+}
+#main {
+    padding: 0 40px;
+    color: #888;
+    height: 50%;
+    text-align: center;
+}
+#main h1 {
+    font-size: 4em;
+    color: #FFFFFF;
+    font-family: 'Fira Mono', monospace;
+}
+#main p {
+    font-size: 18px;
+    color: #888;
+}
