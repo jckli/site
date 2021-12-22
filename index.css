@@ -39,20 +39,24 @@ a:hover {
     color: #888;
     height: 50%;
 }
-#title > .name {
-    display: inline-block;
+#title > .name-title {
+    display: flex;
+    margin-bottom: 1rem;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
 }
-#title > .name > #main-bio {
+#title > .name-title > .name > #main-bio {
     color: #5e5e5e;
     font-size: 1.4em;
     font-family: Fira Mono;
+    margin-bottom: 0px;
 }
-#title > img {
-    display: inline-block;
-    margin-left: 394px;
-    vertical-align: top;
+#title > .name-title > .name > .alt-bio {
+    display: none;
+}
+#title > .name-title > img {
     height: 80px;
-    margin-top: 4px;
 }
 #title > .bio {
     margin-bottom: 0;
@@ -250,7 +254,7 @@ a:hover {
     #projects > #p > .row {
         display: block;
     }
-    #title > img {
+    #title > .name-title > img {
         display: none;
     }
     #skills > .full {
@@ -275,6 +279,12 @@ a:hover {
 @media (max-width: 500px) {
     #skills > .condense > .row > .col-4 > .list-group {
         margin-bottom: 10px;
+    }
+    #title > .name-title > .name > .main-bio {
+        display: none;
+    }
+    #title > .name-title > .name > .alt-bio {
+        display: block;
     }
 }
 @media (max-width: 425px) {
