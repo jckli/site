@@ -1,0 +1,61 @@
+body {
+    font-family: 'Lato', sans-serif;
+    background: #101010;
+}
+.content {
+    margin: auto;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content > .nav {
+    position: absolute;
+    height: 60px;
+    text-align: center;
+    align-items: center;
+    align-self: flex-start;
+    font-family: 'Fira Mono', monospace;
+}
+.content > .nav > a {
+    color: #FFFFFF;
+    transition: 100ms ease-out color;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+.content > .nav > a:hover {
+    color: #ccc;
+    transition: 100ms ease-out color;
+}
+.content > .container {
+    max-width: 65ch;
+    padding: 0 40px;
+    display: block;
+}
+.content > .container > img {
+    max-width: 100%;
+    text-align: center;
+    border-radius: 12px;
+}
+.content > .container > h1 {
+    font-size: 2em;
+    text-align: center;
+    color: #FFFFFF;
+    font-family: 'Fira Mono', monospace;
+}
+.content > .container > h2 {
+    margin-top: 18px;
+    margin-bottom: 4px;
+    font-size: 1.4em;
+    color: #FFFFFF;
+    font-family: 'Lato', monospace;
+
+}
+.content > .container > p {
+    font-size: 18px;
+    color: #888;
+    font-family: 'Lato';
+}
+.content > .container > p > b {
+    color: #ccc;
+}
