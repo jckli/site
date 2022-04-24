@@ -109,6 +109,11 @@ const Home: NextPage = () => {
                                 repo_link="https://github.com/jckli/picsiv"
                             />
                         </div>
+                        <span className="block text-md text-center text-norm-gray">
+                            View my other projects on my
+                            <a href="https://github.com/jckli"> GitHub </a>
+                            profile.
+                        </span>
                     </div>
                 </div>
             </div>
