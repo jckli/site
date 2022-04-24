@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import { SocialButton } from "../components/SocialButton";
+import { Project } from "../components/Project";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faSpotify, faTwitter, faYoutube } from "@fortawesome/free-brands-svg-icons";
 
@@ -9,7 +10,7 @@ const Home: NextPage = () => {
     return (
         <>
             <div id="intro" className="min-h-[650px] py-[60px] items-center justify-center relative flex">
-                <div id="title" className="px-[40px] w-[750px] h-[50%]">
+                <div id="title" className="px-[40px] max-w-[750px] h-[50%]">
                     <div className="flex mb-4 items-center justify-between">
                         <span>
                             <h1 className="text-white text-[2em] font-firamono mb-2">Jack Li</h1>
@@ -34,6 +35,61 @@ const Home: NextPage = () => {
                         <a href="mailto:jack@jackli.dev">Ask me </a>
                         for my resume.
                     </p>
+                </div>
+            </div>
+            <div className="bg-black flex justify-center items-center">
+                <div id="projects" className="max-w-[1000px] py-[40px] px-[50px] text-white">
+                    <h2 className="text-[1.5em] font-firamono">Projects</h2>
+                    <br />
+                    <div className="mx-[-20px]">
+                        <div className="block amstlg:grid grid-cols-2 gap-[30px]">
+                            <Project
+                                name="MangaUpdates Bot"
+                                img_src="/projects/mangaupdatesbot.png"
+                                type="Discord Bot"
+                                time_period="Sep 2021 - Current"
+                                description="I developed a Discord bot in Python using discord.py to be able to send manga chapter updates for mangas, manhwas, and doujins conveniently through the Discord platform."
+                                button_text="Invite the Bot"
+                                button_link="https://discord.com/oauth2/authorize?client_id=880694914365685781&scope=bot&permissions=268856384"
+                                repo_link="https://github.com/jckli/mangaupdates-bot"
+                            />
+                            <Project 
+                                name="cheinstein.py"
+                                img_src="/projects/einsteinbot.png"
+                                type="Python Library"
+                                time_period="Dec 2021 - Current"
+                                description="This nifty Python library allows for easy accessibility of the questions and answers given by Chegg.com. It was mainly created to parse Chegg for the Discord bot, EinsteinBot."
+                                button_text="View on PyPI"
+                                button_link="https://pypi.org/project/cheinsteinpy/"
+                                repo_link="https://github.com/DouglasTaylorSupportGroup/cheinstein.py"
+                            />
+                        </div>
+                        <div className="block amstlg:grid grid-cols-2 gap-[30px]">
+                            <Project 
+                                name="Website"
+                                img_src="https://avatars.githubusercontent.com/u/39673993"
+                                type="Web App"
+                                time_period="Oct 2021"
+                                description="You're looking at it! This website is just a place to display things about me along with showcasing my projects and skills. It was made in Next.js in TypeScript with TailwindCSS."
+                                button_text="Link"
+                                button_link="https://jackli.dev"
+                                repo_link="https://github.com/jckli/site"
+                            />
+                            <Project
+                                name="mal-box"
+                                img_src="/projects/mal.png"
+                                type="GitHub App"
+                                time_period="Jan 2022 - Mar 2022"
+                                description="This app displays one's MyAnimeList recent anime/manga activity on their GitHub profile. It does this by continously updating a GitHub gist which can be pinned on a GitHub profile."
+                                button_text="See App in Action"
+                                button_link="https://gist.github.com/jckli/8ec3d814f1b877b80547e2ea1df5ce6e"
+                                repo_link="https://github.com/jckli/mal-box"
+                            />
+                        </div>
+                        <div className="block amstlg:grid grid-cols-2 gap-[30px]">
+                            
+                        </div>
+                    </div>
                 </div>
             </div>
         </>
