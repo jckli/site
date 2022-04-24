@@ -20,9 +20,13 @@ export const Project = (props: any) => {
                     {props.description}
                 </p>
                 <div className="flex">
-                    <ProjectButton link={props.button_link} name={props.button_text} />
+                    {props.button_text && props.button_link &&
+                        <div className="mr-4">
+                            <ProjectButton link={props.button_link} name={props.button_text} />
+                        </div>
+                    }
                     {props.repo_link && 
-                        <div className="ml-4 flex items-center">
+                        <div className="flex items-center">
                             <GitHubRepoButton link={props.repo_link} icon={faGithub} />
                         </div>
                     }
