@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+    font-size: 18px;
+    font-family: 'Lato', sans-serif;
+    background: #101010;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: #9684f8;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #c9bfff;
+    transition: 100ms ease-out color;
+    text-decoration: none;
+}
+
+p {
+    color: #888;
+}
+
+* {
+    box-sizing: border-box;
+}
