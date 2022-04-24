@@ -87,7 +87,24 @@ const Home: NextPage = () => {
                             />
                         </div>
                         <div className="block amstlg:grid grid-cols-2 gap-[30px]">
-                            
+                            <Project
+                                name="Statsify"
+                                img_src="/projects/statsify.png"
+                                type="Web App"
+                                time_period="Aug 2021 - Mar 2022"
+                                description="This Flask web app allows easy viewing of one's spotify statistics with only a simple login. It can also utilize one's Spotify data package to calculate more detailed statistics."
+                                repo_link="https://github.com/jckli/Statsify"
+                            />
+                            <Project
+                                name="Picsiv"
+                                img_src="/projects/picsiv.png"
+                                type="Discord Bot"
+                                time_period="Feb 2022 - Current"
+                                description="This stylish Discord bot allows the viewing of images from a variety of anime art sources. It uses my various Cloudflare workers to be able to seamlessly and swiftly fetch images."
+                                button_text="Invite the Bot"
+                                button_link="https://discord.com/oauth2/authorize?client_id=947361674703302738&scope=applications.commands%20bot&permissions=3072"
+                                repo_link="https://github.com/jckli/picsiv"
+                            />
                         </div>
                     </div>
                 </div>
