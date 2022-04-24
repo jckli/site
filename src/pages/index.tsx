@@ -74,7 +74,7 @@ const Home: NextPage = () => {
                                 type="Web App"
                                 time_period="Oct 2021"
                                 description="You're looking at it! This website is just a place to display things about me along with showcasing my projects and skills. It was made in Next.js in TypeScript with TailwindCSS."
-                                button_text="Link"
+                                button_text="Website Link"
                                 button_link="https://jackli.dev"
                                 repo_link="https://github.com/jckli/site"
                             />
