@@ -1,8 +1,9 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import { SocialButton } from "../components/SocialButton";
+import { SocialButton } from "../components/Buttons/SocialButton";
 import { Project } from "../components/Project";
+import { Header } from "../components/Header/Navbar";
 import { getCurrentYear } from "../util/year";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faEnvelope, faHeart } from "@fortawesome/free-solid-svg-icons";
@@ -12,7 +13,8 @@ const Home: NextPage = () => {
     const currentYear = getCurrentYear();
     return (
         <>
-            <div id="intro" className="min-h-[650px] py-[60px] items-center justify-center relative flex">
+            <Header />
+            <div id="intro" className="min-h-[650px] pb-[68px] items-center justify-center relative flex">
                 <div id="title" className="px-[40px] max-w-[750px] h-[50%]">
                     <div className="flex mb-4 items-center justify-between">
                         <span>

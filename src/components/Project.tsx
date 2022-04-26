@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { ProjectButton } from "./ProjectButton";
-import { GitHubRepoButton } from "./GitHubRepoButton";
+import { ProjectButton } from "./Buttons/ProjectButton";
+import { GitHubRepoButton } from "./Buttons/GitHubRepoButton";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 export const Project = (props: any) => {
