@@ -13,7 +13,7 @@ export const SocialButton = (props: any) => {
             whileTap={{ scale: 0.95 }}
         >
             <FontAwesomeIcon icon={props.icon} />
-            <span className="ml-[8px]">{props.name}</span>
+            <span className="ml-[8px] hidden suprsm:inline-block">{props.name}</span>
         </motion.a>
     );
 };
