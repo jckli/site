@@ -4,7 +4,9 @@ module.exports = {
   images: {
     domains: [
       "avatars.githubusercontent.com",
-      "cdn.hayasaka.moe"
+      "cdn.hayasaka.moe",
+      "i.scdn.co",
+      "cdn.discordapp.com"
     ],
 
   }

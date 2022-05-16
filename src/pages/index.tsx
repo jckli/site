@@ -2,12 +2,14 @@ import type { NextPage } from "next";
 import Image from "next/image";
 import { SocialButton } from "../components/Buttons/SocialButton";
 import { Project } from "../components/Project";
+import { Lanyard } from "../components/Lanyard";
 import { faEnvelope, faHeart } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faSpotify, faTwitter, faYoutube } from "@fortawesome/free-brands-svg-icons";
 
 const Home: NextPage = () => {
     return (
         <>
+            <Lanyard />
             <div id="intro" className="min-h-[650px] pb-[68px] items-center justify-center relative flex">
                 <div id="title" className="px-[40px] max-w-[750px] h-[50%]">
                     <div className="flex mb-4 items-center justify-between">
