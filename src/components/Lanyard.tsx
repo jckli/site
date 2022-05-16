@@ -65,6 +65,7 @@ export const Lanyard = (props: any) => {
                                         <div className="grow">
                                             <h1 className="font-bold leading-none text-[16px]">{activity.data?.activities[0].name}</h1>
                                             <p className="leading-none mt-[6px] text-[14px]">{activity.data?.activities[0].details}</p>
+                                            <p className="leading-none mt-[6px] text-[14px]">{activity.data?.activities[0].state}</p>
                                         </div>
                                     </div>
                                 </div>
