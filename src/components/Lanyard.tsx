@@ -1,16 +1,14 @@
 import Image from "next/image";
-import { useLanyard } from "use-lanyard";
 import styled, {keyframes} from "styled-components";
 import SpotifyLogo from "/public/spotify-logo.svg";
-
-const discord_id = "326498384758308875";
+import { LanyardData } from "../hooks/Lanyard";
 
 export const Lanyard = (props: any) => {
-    const activity = useLanyard(discord_id);
+    const activity = LanyardData();
     return (
-        <div className="hidden 2xl:block">
+        <div>
             {activity.data?.activities[0] ? (
-                <div className="fixed top-0 right-0 text-white pr-[10px] pt-[10px] max-w-[350px]">
+                <div className="block lg:absolute lg:top-0 lg:right-0 text-white lg:pr-[10px] lg:pt-[10px] max-w-[350px]">
                     <div className="rounded-lg bg-[#303030]/50">
                         <div className="py-[15px] px-[25px]">
                             {activity.data.activities[0].type == 2 ? (

@@ -1,16 +1,22 @@
 import type { NextPage } from "next";
 import Image from "next/image";
 import { SocialButton } from "../components/Buttons/SocialButton";
-import { Project } from "../components/Project";
 import { Lanyard } from "../components/Lanyard";
+import { LanyardData } from "../hooks/Lanyard";
+import { Project } from "../components/Project";
 import { faEnvelope, faHeart } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faSpotify, faTwitter, faYoutube } from "@fortawesome/free-brands-svg-icons";
 
 const Home: NextPage = () => {
+    const lanyardData = LanyardData();
     return (
         <>
-            <Lanyard />
-            <div id="intro" className="min-h-[650px] pb-[68px] items-center justify-center relative flex">
+            {lanyardData.data?.activities[0] ? (
+                <div className="hidden lg:block">
+                    <Lanyard />
+                </div>
+            ) : null}
+            <div id="intro" className="min-h-[650px] pb-[68px] relative flex items-center justify-center flex-col">
                 <div id="title" className="px-[40px] max-w-[750px] h-[50%]">
                     <div className="flex mb-4 items-center justify-between">
                         <span>
@@ -37,6 +43,17 @@ const Home: NextPage = () => {
                         for my resume.
                     </p>
                 </div>
+                {lanyardData.data?.activities[0] ? (
+                    <div>
+                        <div className="relative top-[70px] lg:static lg:top-0 lg:hidden">
+                            <div className="flex justify-center items-center">
+                                <div className="px-[20px]">
+                                    <Lanyard />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                ) : null}
             </div>
             <div className="bg-black flex justify-center items-center">
                 <div id="projects" className="max-w-[1000px] py-[40px] px-[50px] text-white">
