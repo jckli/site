@@ -7,24 +7,24 @@ export const Lanyard = (props: any) => {
     const activity = LanyardData();
     return (
         <div>
-            {activity.data?.activities[0] ? (
+            {activity?.activities[0] ? (
                 <div className="block lg:absolute lg:top-0 lg:right-0 text-white lg:pr-[10px] lg:pt-[10px] max-w-[350px]">
                     <div className="rounded-lg bg-[#303030]/50">
                         <div className="py-[15px] px-[25px]">
-                            {activity.data.activities[0].type == 2 ? (
+                            {activity?.activities[0].type == 2 ? (
                                 <div>
                                     <h1 className="font-firamono text-sm font-bold text-[#cccccc]">
                                         Listening to Spotify
                                         <LiveDot />
                                     </h1>
                                     <div className="flex items-center mt-2">
-                                        {activity.data?.spotify?.album_art_url ? (
+                                        {activity?.spotify?.album_art_url ? (
                                             <div className="relative h-[50px] mr-4">
                                                 <div className="min-w-[50px] h-[50px] relative rounded-[8px] overflow-hidden">
-                                                    <Image alt={`${activity.data?.activities[0].name} Large Image`} src={activity.data!.spotify!.album_art_url} layout="fill" />
+                                                    <Image alt={`${activity?.activities[0].name} Large Image`} src={activity.spotify!.album_art_url} layout="fill" />
                                                 </div>
                                                 <div className="absolute bottom-[-5px] right-[-5px] min-w-[20px] h-[20px] rounded-[50%] bg-black border-2 border-solid border-black/80 overflow-hidden">
-                                                    <Image alt={`${activity.data?.activities[0].name} Small Image`} src={SpotifyLogo} layout="fill" />
+                                                    <Image alt={`${activity?.activities[0].name} Small Image`} src={SpotifyLogo} layout="fill" />
                                                 </div>
                                             </div>
                                         ) : (
@@ -33,8 +33,8 @@ export const Lanyard = (props: any) => {
                                             </div>
                                         )}
                                         <div className="grow">
-                                            <h1 className="font-bold leading-none text-[16px]">{activity.data?.spotify?.song}</h1>
-                                            <p className="leading-none mt-[6px] text-[14px]">by {activity.data?.spotify?.artist}</p>
+                                            <h1 className="font-bold leading-none text-[16px]">{activity?.spotify?.song}</h1>
+                                            <p className="leading-none mt-[6px] text-[14px]">by {activity?.spotify?.artist}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -44,14 +44,14 @@ export const Lanyard = (props: any) => {
                                         Doing something
                                     </h1>
                                     <div className="flex items-center mt-2 ">
-                                        {activity.data?.activities[0].assets ? (
+                                        {activity?.activities[0].assets ? (
                                         <div className="relative h-[50px] mr-4">
                                             <div className="min-w-[50px] h-[50px] relative rounded-[8px] overflow-hidden">
-                                                <Image alt={`${activity.data?.activities[0].name} Large Image`} src={`https://cdn.discordapp.com/app-assets/${activity.data!.activities[0].application_id}/${activity.data!.activities[0].assets!.large_image}.png`} layout="fill" />
+                                                <Image alt={`${activity?.activities[0].name} Large Image`} src={`https://cdn.discordapp.com/app-assets/${activity.activities[0].application_id}/${activity.activities[0].assets!.large_image}.png`} layout="fill" />
                                             </div>
-                                            {activity.data?.activities[0].assets!.small_image ? (
+                                            {activity?.activities[0].assets!.small_image ? (
                                                 <div className="absolute bottom-[-5px] right-[-5px] min-w-[20px] h-[20px] rounded-[50%] bg-norm-gray/20 border-2 border-solid border-black/80 overflow-hidden">
-                                                    <Image alt={`${activity.data?.activities[0].name} Small Image`} src={`https://cdn.discordapp.com/app-assets/${activity.data!.activities[0].application_id}/${activity.data!.activities[0].assets!.small_image}.png`} layout="fill" />
+                                                    <Image alt={`${activity?.activities[0].name} Small Image`} src={`https://cdn.discordapp.com/app-assets/${activity.activities[0].application_id}/${activity.activities[0].assets!.small_image}.png`} layout="fill" />
                                                 </div>
                                             ) : null}
                                         </div>
@@ -61,9 +61,9 @@ export const Lanyard = (props: any) => {
                                             </div>
                                         )}
                                         <div className="grow">
-                                            <h1 className="font-bold leading-none text-[16px]">{activity.data?.activities[0].name}</h1>
-                                            <p className="leading-none mt-[6px] text-[14px]">{activity.data?.activities[0].details}</p>
-                                            <p className="leading-none mt-[6px] text-[14px]">{activity.data?.activities[0].state}</p>
+                                            <h1 className="font-bold leading-none text-[16px]">{activity?.activities[0].name}</h1>
+                                            <p className="leading-none mt-[6px] text-[14px]">{activity?.activities[0].details}</p>
+                                            <p className="leading-none mt-[6px] text-[14px]">{activity?.activities[0].state}</p>
                                         </div>
                                     </div>
                                 </div>

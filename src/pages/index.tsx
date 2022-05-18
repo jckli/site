@@ -11,7 +11,7 @@ const Home: NextPage = () => {
     const lanyardData = LanyardData();
     return (
         <>
-            {lanyardData.data?.activities[0] ? (
+            {lanyardData?.activities[0] ? (
                 <div className="hidden lg:block">
                     <Lanyard />
                 </div>
@@ -43,7 +43,7 @@ const Home: NextPage = () => {
                         for my resume.
                     </p>
                 </div>
-                {lanyardData.data?.activities[0] ? (
+                {lanyardData?.activities[0] ? (
                     <div>
                         <div className="relative top-[70px] lg:static lg:top-0 lg:hidden">
                             <div className="flex justify-center items-center">

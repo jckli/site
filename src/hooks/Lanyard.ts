@@ -1,8 +1,8 @@
-import { useLanyard } from "use-lanyard";
+import { useLanyardWs } from "use-lanyard";
 
 const discord_id = "326498384758308875";
 
 export function LanyardData() {
-    const activity = useLanyard(discord_id);
+    const activity = useLanyardWs(discord_id);
     return activity;
 }
