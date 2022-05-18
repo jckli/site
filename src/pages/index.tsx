@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import Image from "next/image";
 import { SocialButton } from "../components/Buttons/SocialButton";
 import { Lanyard } from "../components/Lanyard";
-import { LanyardData } from "../hooks/Lanyard";
+import { LanyardData } from "../hooks/LanyardData";
 import { Project } from "../components/Project";
 import { faEnvelope, faHeart } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faSpotify, faTwitter, faYoutube } from "@fortawesome/free-brands-svg-icons";

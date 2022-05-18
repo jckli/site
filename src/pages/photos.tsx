@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Masonry from "react-masonry-css";
 import { Photo } from "../util/types";
-import { usePhotoAlbum } from "../hooks/photos"
+import { usePhotoAlbum } from "../hooks/Photos";
 
 const breakpointColumnsObj = {
     default: 3,

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styled, {keyframes} from "styled-components";
 import SpotifyLogo from "/public/spotify-logo.svg";
-import { LanyardData } from "../hooks/Lanyard";
+import { LanyardData } from "../hooks/LanyardData";
 
 export const Lanyard = (props: any) => {
     const activity = LanyardData();
