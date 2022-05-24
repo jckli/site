@@ -16,6 +16,11 @@ module.exports = {
         destination: "https://hayasaka.moe",
         permanent: false,
       },
+      {
+        source: "/mangaupdates",
+        destination: "https://discord.com/oauth2/authorize?client_id=880694914365685781&scope=applications.commands%20bot&permissions=268856384",
+        permanent: false,
+      }
     ]
   },
 }
