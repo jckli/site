@@ -30,6 +30,7 @@ const HeaderContent = (props: any) => {
     return (
         <div className="flex">
             <NavbarButton link="/" label="/" onClick={props.onClick} />
+            <NavbarButton link="/about" label="/about" onClick={props.onClick} />
             <NavbarButton link="/photos" label="/photos" onClick={props.onClick} />
         </div>
     )
