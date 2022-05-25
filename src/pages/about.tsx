@@ -23,11 +23,11 @@ const About: NextPage = () => {
                     <ReactTooltip id="age" effect="solid">{age.toString().substring(0, 12)}</ReactTooltip>
                     <p className="inline"> year-old full stack developer. 
                         Thinking of random new ideas and making them come true is my passion.
-                        I love creating open-source software, and I'm always looking for new ways to improve my skills.
+                        I love creating open-source software, and I&apos;m always looking for new ways to improve my skills.
                     </p>
                     <p className="mt-4">
                         Outside of programming, I enjoy photography, playing video games, and spending time with my friends. You can find some of my photos on the
-                        /photos page. Currently, the games I'm playing are VALORANT and Fortnite. Some of my favorite songs are listed below as well.
+                        /photos page. Currently, the games I&apos;m playing are VALORANT and Fortnite. Some of my favorite songs are listed below as well.
                     </p>
                 </div>
             </div>
