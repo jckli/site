@@ -21,7 +21,7 @@ a {
 
 a:hover {
     color: #c9bfff;
-    transition: 100ms ease-out color;
+    transition: 200ms ease-out color;
     text-decoration: none;
 }
 

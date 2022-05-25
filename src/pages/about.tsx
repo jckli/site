@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { useTimePassed } from "../hooks/useTimePassed";
 import ReactTooltip from 'react-tooltip';
 
@@ -17,17 +18,18 @@ const About: NextPage = () => {
                 </div>
                 <br />
                 <div className="inline-block">
-                    
-                    <p className="inline">Hey! I am Jack Li, a </p>
-                    <p data-tip data-for="age" className="inline underline">{Math.floor(age)}</p>
-                    <ReactTooltip id="age" effect="solid">{age.toString().substring(0, 12)}</ReactTooltip>
-                    <p className="inline"> year-old full stack developer. 
+                    <p>
+                        Hey! I am Jack Li, a&nbsp;
+                        <p data-tip data-for="age" className="inline underline">{Math.floor(age)}</p>
+                        <ReactTooltip id="age" effect="solid">{age.toString().substring(0, 12)}</ReactTooltip>
+                        &nbsp;year-old full stack developer. 
                         Thinking of random new ideas and making them come true is my passion.
                         I love creating open-source software, and I&apos;m always looking for new ways to improve my skills.
                     </p>
                     <p className="mt-4">
-                        Outside of programming, I enjoy photography, playing video games, and spending time with my friends. You can find some of my photos on the
-                        /photos page. Currently, the games I&apos;m playing are VALORANT and Fortnite. Some of my favorite songs are listed below as well.
+                        Outside of programming, I enjoy photography, playing video games, and spending time with my friends. You can find some of my photos on the&nbsp;
+                        <Link href="/photos"><a>/photos</a></Link>
+                        &nbsp;page. Currently, the games I&apos;m playing are VALORANT and Fortnite. Some of my favorite songs are listed below as well.
                     </p>
                 </div>
             </div>
