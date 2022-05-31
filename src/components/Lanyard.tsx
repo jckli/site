@@ -57,7 +57,7 @@ export const Lanyard = (props: any) => {
                                         </div>
                                         ) : (
                                             <div className="mr-4 min-w-[50px] h-[50px] relative rounded-[8px] overflow-hidden">
-                                                <Image alt="Spotify Icon"  src={`https://avatars.githubusercontent.com/u/39673993`} layout="fill" />
+                                                <Image alt="Filler Icon"  src={`https://cdn.discordapp.com/avatars/${activity.discord_user.id}/${activity.discord_user.avatar}.png`} layout="fill" />
                                             </div>
                                         )}
                                         <div className="grow">
