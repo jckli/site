@@ -94,14 +94,14 @@ const Home: NextPage = () => {
                                 repo_link="https://github.com/jckli/site"
                             />
                             <Project
-                                name="mal-box"
-                                img_src="/projects/mal.png"
-                                type="GitHub App"
-                                time_period="Jan 2022 - Mar 2022"
-                                description="This app displays one's MyAnimeList recent anime/manga activity on their GitHub profile. It does this by continously updating a GitHub gist which can be pinned on a GitHub profile."
-                                button_text="See App in Action"
-                                button_link="https://gist.github.com/jckli/8ec3d814f1b877b80547e2ea1df5ce6e"
-                                repo_link="https://github.com/jckli/mal-box"
+                                name="sugoiart"
+                                img_src="https://avatars.githubusercontent.com/u/104050203"
+                                type="API"
+                                time_period="Jun 2022 - Current"
+                                description="This is a simple, fast, and open source art API of to get many various artworks from a bunch of artists. It uses Go for the API and Next.js in TypeScript for the website."
+                                button_text="Try the API"
+                                button_link="https://art.hayasaka.moe/"
+                                repo_link="https://github.com/sugoiart"
                             />
                         </div>
                         <div className="block amstlg:grid grid-cols-2 gap-[30px]">
@@ -111,6 +111,7 @@ const Home: NextPage = () => {
                                 type="Web App"
                                 time_period="Aug 2021 - Mar 2022"
                                 description="This Flask web app allows easy viewing of one's spotify statistics with only a simple login. It can also utilize one's Spotify data package to calculate more detailed statistics."
+                                button_text="Website Link"
                                 button_link="https://statsify.hayasaka.moe/"
                                 repo_link="https://github.com/jckli/Statsify"
                             />
