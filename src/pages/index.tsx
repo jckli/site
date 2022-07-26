@@ -111,6 +111,7 @@ const Home: NextPage = () => {
                                 type="Web App"
                                 time_period="Aug 2021 - Mar 2022"
                                 description="This Flask web app allows easy viewing of one's spotify statistics with only a simple login. It can also utilize one's Spotify data package to calculate more detailed statistics."
+                                button_link="https://statsify.hayasaka.moe/"
                                 repo_link="https://github.com/jckli/Statsify"
                             />
                             <Project
