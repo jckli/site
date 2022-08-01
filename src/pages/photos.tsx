@@ -1,7 +1,6 @@
-import type { NextPage } from "next";
 import Masonry from "react-masonry-css";
 import { Photo } from "../util/types";
-import { usePhotoAlbum } from "../hooks/PhotoData";
+import { PhotoAlbum } from "../util/types";
 
 const breakpointColumnsObj = {
     default: 3,
@@ -9,9 +8,12 @@ const breakpointColumnsObj = {
     700: 1
 };
 
-const Photography: NextPage = () => {
-    const photos = usePhotoAlbum();
-    if (!photos.info || photos.error) {
+interface AppProps {
+    photos: PhotoAlbum;
+}
+
+const Photography = ({ photos }: AppProps) => {
+    if (!photos) {
         return (
             <div className="flex py-[50px] justify-center items-center flex-auto">
                 <div className="font-firamono text-[#5e5e5e] ">Loading...</div>
@@ -30,7 +32,7 @@ const Photography: NextPage = () => {
                             className="flex w-auto smd:ml-[-1.5rem]"
                             columnClassName="smd:pl-6"
                         >
-                            {photos.info.files.map((photo: Photo) => (
+                            {photos.files.map((photo: Photo) => (
                                 <div key={photo.id} className="mb-6 relative">
                                     <img className="rounded-[8px]" alt={photo.name} src={photo.url} />
                                 </div>
@@ -42,5 +44,13 @@ const Photography: NextPage = () => {
         </>
     );
 };
+
+export async function getStaticProps() {
+    const photos: PhotoAlbum = await fetch("https://jackli.dev/api/photos").then(res => res.json());
+    return {
+        props: { photos },
+        revalidate: 3600,
+    };
+}
 
 export default Photography;
