@@ -53,7 +53,7 @@ export const Lanyard = (props: any) => {
                                             <div className="min-w-[50px] h-[50px] relative rounded-[8px] overflow-hidden">
                                                 <Image alt={`${activity?.activities[anum].name} Large Image`} src={`https://cdn.discordapp.com/app-assets/${activity.activities[anum].application_id}/${activity.activities[anum].assets!.large_image}.png`} layout="fill" />
                                             </div>
-                                            {activity?.activities[0].assets!.small_image ? (
+                                            {activity?.activities[anum].assets!.small_image ? (
                                                 <div className="absolute bottom-[-5px] right-[-5px] min-w-[20px] h-[20px] rounded-[50%] bg-norm-gray/20 border-2 border-solid border-black/80 overflow-hidden">
                                                     <Image alt={`${activity?.activities[anum].name} Small Image`} src={`https://cdn.discordapp.com/app-assets/${activity.activities[anum].application_id}/${activity.activities[anum].assets!.small_image}.png`} layout="fill" />
                                                 </div>
