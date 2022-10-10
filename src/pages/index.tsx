@@ -5,7 +5,7 @@ import { Lanyard } from "../components/Lanyard";
 import { LanyardData } from "../hooks/LanyardData";
 import { Project } from "../components/Project";
 import { faEnvelope, faHeart } from "@fortawesome/free-solid-svg-icons";
-import { faGithub, faSpotify, faTwitter, faYoutube } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faSpotify, faTwitter, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 const Home: NextPage = () => {
     const lanyardData = LanyardData();
@@ -33,9 +33,9 @@ const Home: NextPage = () => {
                     <div>
                         <SocialButton link="mailto:jack@jackli.dev" name="jack@jackli.dev" icon={faEnvelope} />
                         <SocialButton link="https://github.com/jckli" name="jckli" icon={faGithub} />
-                        <SocialButton link="https://open.spotify.com/user/mcinvasion" name="Jack Li" icon={faSpotify} />
+                        <SocialButton link="https://www.linkedin.com/in/jackhli/" name="Jack Li" icon={faLinkedin} />
+                        <SocialButton link="https://open.spotify.com/user/mcinvasion" name="fack" icon={faSpotify} />
                         <SocialButton link="https://twitter.com/notjackli" name="notjackli" icon={faTwitter} />
-                        <SocialButton link="https://www.youtube.com/channel/UCL1LOsBY8pIx-7QyXEcTBpw" name="Jack Li" icon={faYoutube} />
                     </div>
                     <br />
                     <p>
