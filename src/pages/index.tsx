@@ -31,7 +31,7 @@ const Home: NextPage = () => {
                     <p className="mb-0">High school junior. Software/Web development on the side.</p>
                     <br />
                     <div>
-                        <SocialButton link="mailto:jack@jackli.dev" name="jack@jackli.dev" icon={faEnvelope} />
+                        <SocialButton link="mailto:me@jackli.dev" name="me@jackli.dev" icon={faEnvelope} />
                         <SocialButton link="https://github.com/jckli" name="jckli" icon={faGithub} />
                         <SocialButton link="https://www.linkedin.com/in/jackhli/" name="Jack Li" icon={faLinkedin} />
                         <SocialButton link="https://open.spotify.com/user/mcinvasion" name="fack" icon={faSpotify} />
