@@ -21,14 +21,18 @@ const Home: NextPage = () => {
                     <div className="flex mb-4 items-center justify-between">
                         <span>
                             <h1 className="text-white text-[2em] font-firamono mb-2">Jack Li</h1>
-                            <p id="main-bio" className="font-firamono text-[#5e5e5e] text-[1.4em] hidden sm:block">Full-Stack Developer</p>
-                            <p id="alt-bio" className="font-firamono text-[#5e5e5e] text-[1.4em] block sm:hidden">Developer</p>
+                            <p id="main-bio" className="font-firamono text-[#5e5e5e] text-[1.4em] hidden sm:block">
+                                Full-Stack Developer
+                            </p>
+                            <p id="alt-bio" className="font-firamono text-[#5e5e5e] text-[1.4em] block sm:hidden">
+                                Developer
+                            </p>
                         </span>
                         <div className="w-[120.967px] h-[80px] relative hidden md:block">
                             <Image alt="Signature" src="/signature.png" layout="fill"></Image>
                         </div>
                     </div>
-                    <p className="mb-0">High school junior. Software/Web development on the side.</p>
+                    <p className="mb-0">High school senior. Software/Web development on the side.</p>
                     <br />
                     <div>
                         <SocialButton link="mailto:me@jackli.dev" name="me@jackli.dev" icon={faEnvelope} />
@@ -71,7 +75,7 @@ const Home: NextPage = () => {
                                 button_link="https://discord.com/oauth2/authorize?client_id=880694914365685781&scope=bot&permissions=268856384"
                                 repo_link="https://github.com/jckli/mangaupdates-bot"
                             />
-                            <Project 
+                            <Project
                                 name="cheinstein.py"
                                 img_src="/projects/einsteinbot.png"
                                 type="Python Library"
@@ -83,7 +87,7 @@ const Home: NextPage = () => {
                             />
                         </div>
                         <div className="block amstlg:grid grid-cols-2 gap-[30px]">
-                            <Project 
+                            <Project
                                 name="Website"
                                 img_src="https://avatars.githubusercontent.com/u/39673993"
                                 type="Web App"
