@@ -1,11 +1,12 @@
 import Masonry from "react-masonry-css";
+import Image from "next/future/image";
 import { Photo } from "../util/types";
 import { PhotoAlbum } from "../util/types";
 
 const breakpointColumnsObj = {
     default: 3,
     1100: 2,
-    700: 1
+    700: 1,
 };
 
 interface AppProps {
@@ -33,9 +34,14 @@ const Photography = ({ photos }: AppProps) => {
                             columnClassName="smd:pl-6"
                         >
                             {photos.files.map((photo: Photo) => (
-                                <div key={photo.id} className="mb-6 relative">
-                                    <img className="rounded-[8px]" alt={photo.name} src={photo.url} />
-                                </div>
+                                <Image
+                                    className="rounded-[8px] mb-6 w-full h-auto"
+                                    width="2000"
+                                    height="1000"
+                                    key={photo.id}
+                                    alt={photo.name}
+                                    src={photo.url}
+                                />
                             ))}
                         </Masonry>
                     </div>
