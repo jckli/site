@@ -19,6 +19,7 @@
 .DS_Store
 *.pem
 bun.lockb
+.vscode
 
 # debug
 npm-debug.log*
