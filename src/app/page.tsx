@@ -3,7 +3,7 @@ import Image from "next/image";
 import { faGithub, faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
-export default function Index() {
+const Index = () => {
     return (
         <>
             <div className="w-full h-[100vh] flex flex-col items-center justify-center text-text-color">
@@ -39,4 +39,6 @@ export default function Index() {
             </div>
         </>
     );
-}
+};
+
+export default Index;
