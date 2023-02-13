@@ -33,7 +33,7 @@ export const Activity = (props: any) => {
                                             <p className="font-metropolis-bold text-lg leading-6 max-w-[250px] text-ellipsis whitespace-nowrap overflow-hidden">
                                                 {data.spotify!.song}
                                             </p>
-                                            <p className="font-metropolis text-lg text-text-darker leading-6 max-w-[250px] text-ellipsis whitespace-nowrap overflow-hidden">
+                                            <p className="font-metropolis text-base text-text-darker leading-6 max-w-[250px] text-ellipsis whitespace-nowrap overflow-hidden">
                                                 by {data.spotify!.artist}
                                             </p>
                                         </div>
@@ -73,12 +73,12 @@ export const Activity = (props: any) => {
                                                 {data.activities[0].name}
                                             </p>
                                             {data.activities[0].details && (
-                                                <p className="font-metropolis text-lg text-text-darker leading-6 max-w-[180px] sm:max-w-[290px] text-ellipsis whitespace-nowrap overflow-hidden">
+                                                <p className="font-metropolis text-base text-text-darker leading-6 max-w-[180px] sm:max-w-[290px] text-ellipsis whitespace-nowrap overflow-hidden">
                                                     {data.activities[0].details}
                                                 </p>
                                             )}
                                             {data.activities[0].state && (
-                                                <p className="font-metropolis text-lg text-text-darker leading-6 max-w-[180px] sm:max-w-[290px] text-ellipsis whitespace-nowrap overflow-hidden">
+                                                <p className="font-metropolis text-base text-text-darker leading-6 max-w-[180px] sm:max-w-[290px] text-ellipsis whitespace-nowrap overflow-hidden">
                                                     {data.activities[0].state}
                                                 </p>
                                             )}
