@@ -69,7 +69,7 @@ export const Activity = (props: any) => {
                                                 </div>
                                             )}
                                         </div>
-                                        <div className="flex flex-col justify-center md:justify-start ml-4">
+                                        <div className="flex flex-col justify-center md:justify-start ml-4 min-w-[180px]">
                                             <p className="font-metropolis-bold text-lg leading-6 max-w-[180px] sm:max-w-[290px] text-ellipsis whitespace-nowrap overflow-hidden">
                                                 {data.activities[0].name}
                                             </p>
