@@ -45,8 +45,8 @@ const Index = () => {
                 <div className="flex items-center justify-center px-8 mt-20">
                     <Activity />
                 </div>
-                <Footer />
             </div>
+            <Footer />
         </>
     );
 };
