@@ -2,6 +2,7 @@
 
 import { Project } from "@/components/Project";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
+import { Footer } from "@/components/Footer";
 
 const Projects = () => {
     const isBreakpoint = useMediaQuery("810px");
@@ -160,6 +161,7 @@ const Projects = () => {
                     </div>
                 )}
             </div>
+            <Footer />
         </>
     );
 };

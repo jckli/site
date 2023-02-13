@@ -3,6 +3,7 @@ import { faGithub, faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-ic
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { IconButton } from "@/components/IconButton";
 import { Activity } from "@/components/Lanyard/Activity";
+import { Footer } from "@/components/Footer";
 
 const Index = () => {
     return (
@@ -44,6 +45,7 @@ const Index = () => {
                 <div className="flex items-center justify-center px-8 mt-20">
                     <Activity />
                 </div>
+                <Footer />
             </div>
         </>
     );
