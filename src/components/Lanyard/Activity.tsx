@@ -9,7 +9,7 @@ export const Activity = (props: any) => {
     return (
         <>
             <div className="bg-[#1a202c] rounded-lg">
-                {data && data.activities && (
+                {data && data.activities.length > 0 && (
                     <div className="px-5 py-4">
                         <div className="flex flex-col text-text-color gap-3">
                             {data.listening_to_spotify && data.activities[0].type === 2 && (
