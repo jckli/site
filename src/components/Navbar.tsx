@@ -8,6 +8,7 @@ export const Navbar = (props: any) => {
     var active = props.active;
     const navigation = [
         { name: "/index", href: "/" },
+        { name: "/projects", href: "/projects" },
         { name: "/faq", href: "/faq" },
     ];
     return (
