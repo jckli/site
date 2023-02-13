@@ -4,6 +4,15 @@
 
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap");
 
+@font-face {
+    font-family: MetropolisRegular;
+    src: url("/fonts/MetropolisRegular.ttf");
+}
+@font-face {
+    font-family: MetropolisBold;
+    src: url("/fonts/MetropolisBold.ttf");
+}
+
 html,
 body {
     padding: 0;
@@ -11,7 +20,7 @@ body {
     font-family: JetBrains Mono, monospace;
     width: 100vw;
     height: 100vh;
-    background: #1a202c;
+    background: #171923;
 }
 
 a {

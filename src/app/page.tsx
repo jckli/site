@@ -1,13 +1,14 @@
-import { IconButton } from "@/components/IconButton";
 import Image from "next/image";
 import { faGithub, faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { IconButton } from "@/components/IconButton";
+import { Activity } from "@/components/Lanyard/Activity";
 
 const Index = () => {
     return (
         <>
-            <div className="w-full h-[100vh] flex flex-col items-center justify-center text-text-color">
-                <div className="max-w-[750px]">
+            <div className="w-full h-[60vh] flex flex-col items-center justify-center text-text-color">
+                <div className="max-w-[750px] px-10">
                     <div>
                         <Image
                             src="https://avatars.githubusercontent.com/u/39673993"
@@ -28,7 +29,7 @@ const Index = () => {
                             (@jckli)
                         </a>
                     </h1>
-                    <p>I make cool things with code.</p>
+                    <p className="font-metropolis text-lg">Python, TypeScript, Go. I make cool things using code.</p>
                     <div className="mt-2 flex gap-3">
                         <IconButton icon={faEnvelope} href="mailto:me@jackli.dev" />
                         <IconButton icon={faGithub} href="https://github.com/jckli" />
@@ -36,6 +37,9 @@ const Index = () => {
                         <IconButton icon={faTwitter} href="https://twitter.com/notjackli" />
                     </div>
                 </div>
+            </div>
+            <div className="flex items-center justify-center px-8">
+                <Activity />
             </div>
         </>
     );

@@ -9,7 +9,7 @@ export const IconButton = (props: any) => {
             href={props.href}
             target="_blank"
             className="
-            text-text-color transition-all ease-in-out transition-200 hover:text-pink-accent
+            text-text-darkest transition-all ease-in-out transition-200 hover:text-pink-accent
             "
             whileTap={{ scale: 0.95 }}
         >

@@ -10,12 +10,14 @@ module.exports = {
                 "pink-accent": "#a385b3",
             },
         },
-        FontFamily: {
+        fontFamily: {
             "jetbrains-mono": ["JetBrains Mono", "monospace"],
+            "metropolis": ["MetropolisRegular", "sans-serif"],
+            "metropolis-bold": ["MetropolisBold", "sans-serif"],
         },
     },
     variants: {
         extend: {},
     },
-    plugins: [require("@tailwindcss/line-clamp")],
+    plugins: [require("@tailwindcss/line-clamp"), require("taos/plugin")],
 };
