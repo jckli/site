@@ -29,7 +29,7 @@ export const Activity = (props: any) => {
                                             height={80}
                                             className="rounded-lg"
                                         />
-                                        <div className="flex flex-col ml-4">
+                                        <div className="flex flex-col ml-4 min-w-[180px]">
                                             <p className="font-metropolis-bold text-lg leading-6 max-w-[250px] text-ellipsis whitespace-nowrap overflow-hidden">
                                                 {data.spotify!.song}
                                             </p>
