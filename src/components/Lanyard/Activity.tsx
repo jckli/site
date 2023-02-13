@@ -6,7 +6,6 @@ import styled, { keyframes } from "styled-components";
 
 export const Activity = (props: any) => {
     const data = useLanyardWS("326498384758308875");
-    console.log(data);
     return (
         <>
             <div className="bg-[#1a202c] rounded-lg">
