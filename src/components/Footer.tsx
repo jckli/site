@@ -4,7 +4,7 @@ import { faHeart } from "@fortawesome/free-solid-svg-icons";
 export const Footer = () => {
     const currentYear = new Date().getFullYear();
     return (
-        <div className="flex justify-center w-full text-text-color my-9">
+        <div className="flex justify-center w-full text-text-color min-h-[90px]">
             <div className="items-center flex flex-row justify-between xl:w-[1140px] lg:w-[960px] md:w-[720px] sm:w-[530px]">
                 <div id="first" className="text-norm-gray text-sm hidden sm:block">
                     Made with <FontAwesomeIcon icon={faHeart} /> by{" "}

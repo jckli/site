@@ -13,7 +13,7 @@ export const Navbar = (props: any) => {
     ];
     return (
         <>
-            <div className="w-full flex justify-center items-center gap-6 text-text-color h-[10vh]">
+            <div className="w-full flex justify-center items-center gap-6 text-text-color min-h-[90px]">
                 {navigation.map(item => (
                     <Link
                         href={item.href}

@@ -7,7 +7,7 @@ import { Activity } from "@/components/Lanyard/Activity";
 const Index = () => {
     return (
         <>
-            <div className="h-[80vh]">
+            <div className="flex-1">
                 <div className="w-full pt-40 flex flex-col items-center justify-center text-text-color">
                     <div className="max-w-[750px] px-10">
                         <div>
@@ -41,7 +41,7 @@ const Index = () => {
                         </div>
                     </div>
                 </div>
-                <div className="flex items-center justify-center px-8 my-20">
+                <div className="flex items-center justify-center px-8 py-20">
                     <Activity />
                 </div>
             </div>

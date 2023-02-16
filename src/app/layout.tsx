@@ -9,9 +9,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     return (
         <html lang="en">
             <head />
-            <body className="overflow-x-hidden">
+            <body className="overflow-x-hidden flex flex-col min-h-[100vh]">
                 <Navbar />
-                <div>{children}</div>
+                {children}
                 <Footer />
             </body>
         </html>
