@@ -11,7 +11,6 @@ function classNames(...classes: any) {
 export const Status = (props: any) => {
     const data = useLanyardWS("326498384758308875");
     const status = data?.discord_status ?? "offline";
-    console.log(data);
     return (
         <>
             <div
