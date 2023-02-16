@@ -33,5 +33,5 @@ module.exports = {
     variants: {
         extend: {},
     },
-    plugins: [require("@tailwindcss/line-clamp"), require("taos/plugin")],
+    plugins: [require("@tailwindcss/line-clamp")],
 };
