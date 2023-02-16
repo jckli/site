@@ -25,8 +25,8 @@ export const Status = (props: any) => {
                     }[status]
                 )}
             >
-                <div className="scale-[0.9] md:scale-[1.5] space-y-1 text-center">
-                    <p className="scale-[1.6] md:scale-[1.6]">
+                <div className="scale-[0.9] sm:scale-[1.5] space-y-1 text-center">
+                    <p className="scale-[1.6]">
                         <FontAwesomeIcon icon={faDiscord} />
                     </p>
                     <span>{status}</span>
