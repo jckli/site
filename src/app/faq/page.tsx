@@ -1,10 +1,18 @@
+import { Status } from "@/components/Lanyard/Status";
 import { QA } from "@/components/QA";
 
 const FrequentlyAskedQuestions = () => {
     return (
         <>
-            <div className="flex justify-center">
-                <QA question="who are u?" answer="a simple coder" />
+            <div className="mx-auto grid max-w-3xl grid-cols-6 gap-6 px-6">
+                <QA
+                    question="Who am I?"
+                    answer="I'm a casual full stack developer that creats cool things in my free time using numerous efficient and scalable technologies."
+                    cols="col-span-4"
+                />
+                <div className="col-span-2 h-full">
+                    <Status />
+                </div>
             </div>
         </>
     );
