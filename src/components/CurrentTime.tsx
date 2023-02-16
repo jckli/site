@@ -29,7 +29,7 @@ export const CurrentTime = (props: any) => {
         <>
             <Transition
                 show={timeInAz != ""}
-                enter="ease-out duration-100"
+                enter="ease-out duration-200"
                 enterFrom="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-[0.98]"
                 enterTo="opacity-100 translate-y-0 sm:scale-100"
                 leave="ease-in duration-200"
