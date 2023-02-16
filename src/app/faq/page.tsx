@@ -17,6 +17,21 @@ const FrequentlyAskedQuestions = () => {
                 <div className="col-span-3 sm:col-span-2 h-full">
                     <CurrentTime />
                 </div>
+                <QA
+                    question="hayasaka.moe?"
+                    customAnswer={
+                        <p className="mt-2 text-text-darker font-metropolis">
+                            <a
+                                href="https://hayasaka.moe"
+                                className="text-text-darkest hover:text-pink-accent transition-all ease-in-out hover:before:scale-x-100 hover:before:origin-left relative before:w-full before:h-[1px] before:origin-right before:transition-transform before:duration-300 before:scale-x-0 before:bg-pink-accent before:absolute before:left-0 before:bottom-0"
+                            >
+                                hayasaka.moe
+                            </a>{" "}
+                            <span>is a domain that I use to host my non personal projects.</span>
+                        </p>
+                    }
+                    cols="col-span-3 sm:col-span-4"
+                />
             </div>
         </>
     );
