@@ -7,7 +7,7 @@ const FrequentlyAskedQuestions = () => {
             <div className="mx-auto grid max-w-3xl grid-cols-6 gap-6 px-6">
                 <QA
                     question="Who am I?"
-                    answer="I'm a casual full stack developer that creats cool things in my free time using numerous efficient and scalable technologies."
+                    answer="I'm a casual full stack developer that creates cool things in my free time using modern efficient and scalable technologies."
                     cols="col-span-4"
                 />
                 <div className="col-span-2 h-full">
