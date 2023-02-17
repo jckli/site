@@ -74,7 +74,7 @@ const Projects = () => {
                         src="/projects/cheinstein.png"
                         lang="Python"
                         description="Quickly extract and parse questions and answers from Chegg.com, all within a python library."
-                        button_link="https://pypi.org/project/cheinstein.py/"
+                        button_link="https://pypi.org/project/cheinsteinpy/"
                         button_text="PyPI"
                         github_link="https://github.com/DouglasTaylorSupportGroup/cheinstein.py"
                     />
