@@ -39,7 +39,7 @@ export const Activity = (props: any) => {
                                                 height={80}
                                                 className="rounded-lg"
                                             />
-                                            <div className="flex flex-col ml-4 min-w-[180px]">
+                                            <div className="flex flex-col ml-4 min-w-[150px] sm:min-w-[190px]">
                                                 <p className="font-metropolis-bold text-lg leading-6 max-w-[250px] text-ellipsis whitespace-nowrap overflow-hidden">
                                                     {data.spotify!.song}
                                                 </p>
@@ -78,7 +78,7 @@ export const Activity = (props: any) => {
                                                     </div>
                                                 )}
                                             </div>
-                                            <div className="flex flex-col justify-center md:justify-start ml-4 min-w-[180px]">
+                                            <div className="flex flex-col justify-center md:justify-start ml-4 min-w-[150px] sm:min-w-[190px]">
                                                 <p className="font-metropolis-bold text-lg leading-6 max-w-[180px] sm:max-w-[290px] text-ellipsis whitespace-nowrap overflow-hidden">
                                                     {data.activities[0].name}
                                                 </p>
