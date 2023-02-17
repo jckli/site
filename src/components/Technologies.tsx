@@ -35,7 +35,7 @@ export const Technologies = (props: any) => {
     return (
         <>
             <div className="h-full w-full flex flex-col items-center justify-center rounded-lg min-h-[13rem] text-text-color bg-[#1a202c]">
-                <div className="p-5 h-full grid w-full grid-cols-3 grid-rows-9 xsm:grid-cols-5 xsm:grid-rows-7 sm:grid-cols-6 sm:grid-rows-5 md:grid-cols-7 md:grid-rows-4 gap-4">
+                <div className="p-5 h-full grid w-full grid-cols-7 grid-rows-4 xxsm:grid-cols-8 xsm:grid-cols-9 sm:grid-cols-6 sm:grid-rows-5 md:grid-cols-7 md:grid-rows-4 gap-4">
                     <SiPython size="28" />
                     <SiTypescript size="28" />
                     <SiGo size="28" />

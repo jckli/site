@@ -33,7 +33,7 @@ const FrequentlyAskedQuestions = () => {
                     }
                     cols="col-span-3 sm:col-span-4"
                 />
-                <div className="col-span-3 h-full">
+                <div className="col-span-6 sm:col-span-3 h-full">
                     <Technologies />
                 </div>
             </div>
