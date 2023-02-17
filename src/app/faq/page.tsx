@@ -1,6 +1,7 @@
 import { CurrentTime } from "@/components/CurrentTime";
 import { Status } from "@/components/Lanyard/Status";
 import { QA } from "@/components/QA";
+import { Technologies } from "@/components/Technologies";
 
 const FrequentlyAskedQuestions = () => {
     return (
@@ -32,6 +33,9 @@ const FrequentlyAskedQuestions = () => {
                     }
                     cols="col-span-3 sm:col-span-4"
                 />
+                <div className="col-span-3 h-full">
+                    <Technologies />
+                </div>
             </div>
         </>
     );
