@@ -10,15 +10,18 @@ export async function TopSongs(props: any) {
         <>
             <div className="h-full overflow-x-auto rounded-lg min-h-[13rem] bg-[#1a202c]">
                 <div className="p-5 w-fit">
-                    <h1 className="font-bold text-text-color text-lg">
-                        Top Songs (From{" "}
-                        <a
-                            href="https://retrievify.hayasaka.moe"
-                            className="text-text-darker hover:text-pink-accent transition-all ease-in-out hover:before:scale-x-100 hover:before:origin-left relative before:w-full before:h-[1px] before:origin-right before:transition-transform before:duration-300 before:scale-x-0 before:bg-pink-accent before:absolute before:left-0 before:bottom-0"
-                        >
-                            Retrievify
-                        </a>
-                        )
+                    <h1 className="font-bold text-text-color text-lg w-auto">
+                        Top Songs{" "}
+                        <span className="hidden xxsm:inline">
+                            (From{" "}
+                            <a
+                                href="https://retrievify.hayasaka.moe"
+                                className="text-text-darker hover:text-pink-accent transition-all ease-in-out hover:before:scale-x-100 hover:before:origin-left relative before:w-full before:h-[1px] before:origin-right before:transition-transform before:duration-300 before:scale-x-0 before:bg-pink-accent before:absolute before:left-0 before:bottom-0"
+                            >
+                                Retrievify
+                            </a>
+                            )
+                        </span>
                     </h1>
                     <div className="mt-2 flex gap-4 w-fit">
                         {data.data.items.map((song: any) => (
