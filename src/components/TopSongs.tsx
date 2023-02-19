@@ -32,7 +32,9 @@ export async function TopSongs(props: any) {
                                         className="z-10 cursor-pointer flex flex-col transition-color duration-200 rounded-lg bg-transparent dark:group-hover:bg-black group-hover:bg-white dark:group-hover:bg-opacity-60 group-hover:bg-opacity-70 absolute"
                                     >
                                         <div className="absolute bottom-3 px-2 transition-all duration-200 text-transparent group-hover:text-black dark:group-hover:text-white">
-                                            <h4 className="text-lg font-bold leading-5 line-clamp-2">{song.name}</h4>
+                                            <h4 className="font-metropolis-bold text-lg leading-5 line-clamp-2">
+                                                {song.name}
+                                            </h4>
                                             <p className="text-md font-metropolis leading-5 w-36 text-ellipsis whitespace-nowrap overflow-hidden">
                                                 {song.artists.map((artist: any) => artist.name).join(", ")}
                                             </p>
