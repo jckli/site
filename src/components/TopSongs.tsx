@@ -10,13 +10,22 @@ export async function TopSongs(props: any) {
         <>
             <div className="h-full overflow-x-auto rounded-lg min-h-[13rem] bg-[#1a202c]">
                 <div className="p-5 w-fit">
-                    <h1 className="font-bold text-text-color text-lg">Top Songs</h1>
+                    <h1 className="font-bold text-text-color text-lg">
+                        Top Songs (From{" "}
+                        <a
+                            href="https://retrievify.hayasaka.moe"
+                            className="text-text-darker hover:text-pink-accent transition-all ease-in-out hover:before:scale-x-100 hover:before:origin-left relative before:w-full before:h-[1px] before:origin-right before:transition-transform before:duration-300 before:scale-x-0 before:bg-pink-accent before:absolute before:left-0 before:bottom-0"
+                        >
+                            Retrievify
+                        </a>
+                        )
+                    </h1>
                     <div className="mt-2 flex gap-4 w-fit">
                         {data.data.items.map((song: any) => (
                             <a key={song.id} href={song.external_urls.spotify} className="w-fit">
-                                <div className="group w-40 relative h-full">
+                                <div className="group w-[170px] relative h-full">
                                     <div
-                                        style={{ width: 160, height: 160 }}
+                                        style={{ width: 170, height: 170 }}
                                         className="z-10 cursor-pointer flex flex-col transition-color duration-200 rounded-lg bg-transparent dark:group-hover:bg-black group-hover:bg-white dark:group-hover:bg-opacity-60 group-hover:bg-opacity-70 absolute"
                                     >
                                         <div className="absolute bottom-3 px-2 transition-all duration-200 text-transparent group-hover:text-black dark:group-hover:text-white">
@@ -26,7 +35,7 @@ export async function TopSongs(props: any) {
                                             </p>
                                         </div>
                                     </div>
-                                    <div className="h-40 w-40">
+                                    <div className="h-[170px] w-[170px]">
                                         <Image
                                             fill
                                             alt={song.name}
