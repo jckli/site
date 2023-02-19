@@ -3,6 +3,7 @@ import { Status } from "@/components/Lanyard/Status";
 import { QA } from "@/components/QA";
 import { Technologies } from "@/components/Technologies";
 import { ValorantRank } from "@/components/ValorantRank";
+import { TopSongs } from "@/components/TopSongs";
 
 const FrequentlyAskedQuestions = () => {
     return (
@@ -40,6 +41,10 @@ const FrequentlyAskedQuestions = () => {
                 <div className="col-span-6 sm:col-span-3 h-full">
                     {/* @ts-expect-error Server Component */}
                     <ValorantRank />
+                </div>
+                <div className="col-span-6 h-full">
+                    {/* @ts-expect-error Server Component */}
+                    <TopSongs />
                 </div>
             </div>
         </>
