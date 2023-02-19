@@ -30,7 +30,7 @@ const FrequentlyAskedQuestions = () => {
                             >
                                 hayasaka.moe
                             </a>{" "}
-                            <span>is a domain that I use to host my non personal projects.</span>
+                            <span>is a domain that I use to host my non-personal projects.</span>
                         </p>
                     }
                     cols="col-span-3 sm:col-span-4"
