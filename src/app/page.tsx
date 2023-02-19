@@ -8,7 +8,7 @@ const Index = () => {
     return (
         <>
             <div className="flex-1">
-                <div className="w-full pt-40 flex flex-col items-center justify-center text-text-color">
+                <div className="w-full pt-20 sm:pt-40 flex flex-col items-center justify-center text-text-color">
                     <div className="max-w-[750px] px-10">
                         <div>
                             <Image
