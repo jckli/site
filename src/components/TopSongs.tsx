@@ -62,7 +62,9 @@ export async function TopSongs(props: any) {
 }
 
 async function getSpotifyTopSongs() {
-    const res = await fetch(`https://api.jackli.dev/spotify/top-items/tracks?time_range=short_term&limit=10`);
+    const res = await fetch(`https://api.jackli.dev/spotify/top-items/tracks?time_range=short_term&limit=10`, {
+        next: { revalidate: 60 },
+    });
     if (!res.ok) {
         throw new Error("Failed to fetch spotify top songs");
     }
