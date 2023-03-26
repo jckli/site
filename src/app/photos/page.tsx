@@ -14,8 +14,8 @@ const Photos = async () => {
                                 className="object-contain rounded-md mb-6 w-full h-auto"
                                 src={photo.url}
                                 alt={photo.name}
-                                width="500"
-                                height="500"
+                                width="1000"
+                                height="1000"
                                 placeholder="blur"
                                 blurDataURL={photo.thumb}
                             />
