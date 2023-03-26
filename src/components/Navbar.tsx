@@ -6,7 +6,7 @@ import { Twirl as Hamburger } from "hamburger-react";
 import { useState } from "react";
 
 export const Navbar = (props: any) => {
-    const isBreakpoint = useMediaQuery("894px");
+    const isBreakpoint = useMediaQuery("640px");
     const navigation = [
         { name: "/index", href: "/" },
         { name: "/projects", href: "/projects" },
@@ -48,7 +48,7 @@ export const Navbar = (props: any) => {
                             <Link
                                 href={item.href}
                                 key={item.name}
-                                className="px-3 py-2 rounded-md hover:bg-pink-accent hover:text-text-darker transition-all ease-in-out duration-200"
+                                className="px-2 py-1 rounded-md hover:bg-pink-accent hover:text-text-darker transition-all ease-in-out duration-200"
                             >
                                 {item.name}
                             </Link>
