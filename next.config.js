@@ -5,7 +5,13 @@ module.exports = {
         appDir: true,
     },
     images: {
-        domains: ["avatars.githubusercontent.com", "i.scdn.co", "cdn.discordapp.com", "media.valorant-api.com"],
+        domains: [
+            "avatars.githubusercontent.com",
+            "i.scdn.co",
+            "cdn.discordapp.com",
+            "media.valorant-api.com",
+            "cdn.hayasaka.moe",
+        ],
     },
     async redirects() {
         return [
