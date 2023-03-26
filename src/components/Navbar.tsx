@@ -3,7 +3,7 @@
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 import Link from "next/link";
 import { Twirl as Hamburger } from "hamburger-react";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 export const Navbar = (props: any) => {
     const isBreakpoint = useMediaQuery("640px");
@@ -21,6 +21,27 @@ export const Navbar = (props: any) => {
         height === "0px" ? setHeight("15rem") : setHeight("0px");
         toggled ? setToggled(false) : setToggled(true);
     };
+
+    const navRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (
+                navRef.current &&
+                !navRef.current.contains(event.target as Node) &&
+                toggled &&
+                !document.querySelector(".navbar")?.contains(event.target as Node)
+            ) {
+                expand();
+            }
+        };
+        document.addEventListener("mousedown", handleClickOutside);
+
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, [toggled]);
+
     return (
         <>
             {isBreakpoint ? (
@@ -36,7 +57,7 @@ export const Navbar = (props: any) => {
                     ))}
                 </div>
             ) : (
-                <div className="my-6">
+                <div className="navbar my-6" ref={navRef}>
                     <div className="flex flex-col justify-center items-center text-text-color">
                         <Hamburger toggled={toggled} toggle={expand} />
                     </div>
@@ -48,6 +69,7 @@ export const Navbar = (props: any) => {
                             <Link
                                 href={item.href}
                                 key={item.name}
+                                onClick={expand}
                                 className="px-2 py-1 rounded-md hover:bg-pink-accent hover:text-text-darker transition-all ease-in-out duration-200"
                             >
                                 {item.name}
