@@ -4,6 +4,7 @@ module.exports = {
     theme: {
         extend: {
             colors: {
+                "text-lighter": "#d3d3d3",
                 "text-color": "#9199a0",
                 "text-darker": "#61686f",
                 "text-darkest": "#494e53",

@@ -4,8 +4,14 @@ import { useMediaQuery } from "@/hooks/useMediaQuery";
 import Link from "next/link";
 import { Twirl as Hamburger } from "hamburger-react";
 import { useState, useRef, useEffect } from "react";
+import { usePathname } from "next/navigation";
+
+function classNames(...classes: any) {
+    return classes.filter(Boolean).join(" ");
+}
 
 export const Navbar = (props: any) => {
+    const path = usePathname();
     const isBreakpoint = useMediaQuery("640px");
     const navigation = [
         { name: "/index", href: "/" },
@@ -70,7 +76,10 @@ export const Navbar = (props: any) => {
                                 href={item.href}
                                 key={item.name}
                                 onClick={expand}
-                                className="px-2 py-1 rounded-md hover:bg-pink-accent hover:text-text-darker transition-all ease-in-out duration-200"
+                                className={classNames(
+                                    "px-2 py-1 rounded-md hover:bg-pink-accent hover:text-text-darkest transition-all ease-in-out duration-200",
+                                    path == item.href && "text-text-lighter"
+                                )}
                             >
                                 {item.name}
                             </Link>
