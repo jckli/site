@@ -36,20 +36,7 @@ export async function ValorantRank(props: any) {
                         <h1 className="text-lg leading-6">{currentPlayerRankData.tierName}</h1>
                         <div className="font-metropolis w-full flex flex-col justify-center items-center mt-1">
                             <p className="leading-5">{data.data.LatestCompetitiveUpdate.RankedRatingAfterUpdate}/100</p>
-                            <p className="leading-4 text-sm">
-                                last:{" "}
-                                <span
-                                    className={
-                                        rankedRatingEarned > 0
-                                            ? "text-green-500"
-                                            : rankedRatingEarned < 0
-                                            ? "text-red-500"
-                                            : "text-text-color"
-                                    }
-                                >
-                                    {rankedRatingEarned > 0 ? `+${rankedRatingEarned}` : rankedRatingEarned}
-                                </span>
-                            </p>
+                            <p className="leading-4 text-sm">click for last game</p>
                         </div>
                     </div>
                 </div>

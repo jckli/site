@@ -9,7 +9,6 @@ export const ValorantSwitch = ({ children }: any) => {
         setShow(!show);
     };
 
-    console.log(show);
     return (
         <>
             <button onClick={handleShow} className="h-full w-full absolute rounded-md">
