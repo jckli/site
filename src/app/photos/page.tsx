@@ -8,7 +8,7 @@ const Photos = async () => {
 			<div className="flex flex-col justify-center items-center text-text-darker">
 				<h1 className="text-center text-sm px-10">All photos were taken by me, using a Canon Rebel T6.</h1>
 				<PhotoClientComp>
-					{photos.files.map((photo: any) => (
+					{photos.album.files.map((photo: any) => (
 						<div key={photo.name} className="relative">
 							<Image
 								className="object-contain rounded-md mb-6 w-full h-auto"
