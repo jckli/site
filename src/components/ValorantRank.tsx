@@ -46,7 +46,7 @@ export async function ValorantRank(props: any) {
 }
 
 async function getValorantPlayerData(puuid: string) {
-    const res = await fetch(`https://api.jackli.dev/valorant/mmr/players/${puuid}`, { next: { revalidate: 60 } });
+    const res = await fetch(`https://api.jackli.dev/valorant/mmr/players/${puuid}`, { next: { revalidate: 1800 } });
     if (!res.ok) {
         throw new Error("Failed to fetch valorant player data");
     }
