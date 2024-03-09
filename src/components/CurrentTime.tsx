@@ -38,7 +38,7 @@ export const CurrentTime = (props: any) => {
             >
                 <div
                     className={classNames(
-                        "h-full w-full flex flex-col items-center justify-center rounded-lg min-h-[13rem] text-white",
+                        "h-full w-full flex flex-col items-center justify-center rounded-xl min-h-[13rem] text-white",
                         nighttime ? "bg-sky-900" : "bg-sky-300"
                     )}
                 >
