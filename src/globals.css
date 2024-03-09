@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+	font-family: MetropolisRegular;
+	src: url("/fonts/MetropolisRegular.ttf");
+}
+
+@font-face {
+	font-family: MetropolisBold;
+	src: url("/fonts/MetropolisBold.ttf");
+}
+
+@font-face {
+	font-family: SFMono;
+	src: url("/fonts/SFMonoRegular.otf");
+}
+
 html,
 body {
 	padding: 0;
@@ -10,7 +25,7 @@ body {
 		Helvetica Neue, sans-serif;
 	width: 100vw;
 	height: 100vh;
-	background: #272d2d;
+	background: #131416;
 }
 
 a {
