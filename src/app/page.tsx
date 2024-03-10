@@ -8,7 +8,7 @@ export default function Home() {
                     <CurrentTime />
                 </div>
                 <div className="col-span-3 sm:col-span-4 h-full">
-                    <div className="h-full rounded-xl p-4 border-[1px] border-borcol bg-box min-h-[13rem]">
+                    <div className="h-full rounded-xl p-6 border-[1px] border-borcol bg-box min-h-[13rem]">
                         <h1 className="text-xl text-text-lighter font-metropolis-bold">Domains</h1>
                         <p className="text-text-color mt-2">My only two domains, excluding their subdomains, are:</p>
                         <ul className="list-disc list-inside text-text-color mt-2">
