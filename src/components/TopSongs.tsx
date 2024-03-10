@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import useSWR from "swr";
+import useSWRImmutable from "swr";
 import { Transition } from "@headlessui/react";
 
 function classNames(...classes: any) {
@@ -11,7 +11,7 @@ function classNames(...classes: any) {
 const fetcher = (url: string) => fetch(url).then(res => res.json());
 
 export const TopSongs = (props: any) => {
-    const { data, error } = useSWR("/api/topsongs?time_range=short_term&limit=10", fetcher);
+    const { data, error } = useSWRImmutable("/api/topsongs?time_range=short_term&limit=10", fetcher);
 
     if (error) {
         return (
