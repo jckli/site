@@ -17,7 +17,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <div className="py-20 px-8 xl:px-20 lg:flex">
                     <div>
                         <div className="bg-box border-[1px] border-borcol rounded-2xl">
-                            <div className="p-8 font-metropolis min-w-[22rem]">
+                            <div className="p-8 font-metropolis lg:min-w-[22rem]">
                                 <Image
                                     src="https://avatars.githubusercontent.com/u/39673993"
                                     alt="jckli"
