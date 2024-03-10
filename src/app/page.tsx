@@ -6,7 +6,7 @@ import { TopSongs } from "@/components/TopSongs";
 export default function Home() {
     return (
         <>
-            <div className="flex-grow grid grid-cols-6 gap-6 font-metropolis">
+            <div className="flex-grow flex flex-col md:grid md:grid-cols-6 gap-6 font-metropolis">
                 <div className="col-span-3 sm:col-span-2 h-full">
                     <CurrentTime />
                 </div>
@@ -32,10 +32,10 @@ export default function Home() {
                 <div className="col-span-2 h-full">
                     <Status />
                 </div>
-                <div className="col-span-2 h-full">
+                <div className="col-span-3 xl:col-span-2 h-full">
                     <Technologies />
                 </div>
-                <div className="col-span-4 h-full">
+                <div className="col-span-3 xl:col-span-4 h-full">
                     <TopSongs />
                 </div>
             </div>

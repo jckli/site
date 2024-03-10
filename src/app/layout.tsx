@@ -14,7 +14,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <html lang="en">
             <head />
             <body>
-                <div className="py-20 px-8 lg:flex">
+                <div className="py-20 px-8 xl:px-20 lg:flex">
                     <div>
                         <div className="bg-box border-[1px] border-borcol rounded-2xl">
                             <div className="p-8 font-metropolis min-w-[22rem]">
@@ -49,9 +49,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                             <Activity />
                         </div>
                     </div>
-                    <div className="ml-8 flex-grow">
+                    <div className="mt-8 lg:mt-0 lg:ml-8 flex-grow">
                         <Navbar />
-                        <div className="mt-4 flex-grow">{children}</div>
+                        <div className="mt-8 lg:mt-4 flex-grow">{children}</div>
                     </div>
                 </div>
             </body>

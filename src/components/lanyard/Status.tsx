@@ -25,7 +25,7 @@ export const Status = (props: any) => {
             >
                 <div
                     className={classNames(
-                        "min-h-[13rem] w-full flex items-center justify-center rounded-lg",
+                        "h-full min-h-[13rem] w-full flex items-center justify-center rounded-lg",
                         {
                             online: "bg-green-500 text-white",
                             idle: "bg-orange-400 text-white ",
