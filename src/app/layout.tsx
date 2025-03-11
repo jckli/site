@@ -1,6 +1,4 @@
 import "../globals.css";
-import { config } from "@fortawesome/fontawesome-svg-core";
-import "@fortawesome/fontawesome-svg-core/styles.css";
 import Image from "next/image";
 import { IconButton } from "@/components/IconButton";
 import { Navbar } from "@/components/Navbar";
@@ -8,7 +6,6 @@ import { Activity } from "@/components/lanyard/Activity";
 import { FaEnvelope } from "react-icons/fa";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import Head from "./head";
-config.autoAddCss = false;
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
