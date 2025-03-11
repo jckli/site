@@ -1,8 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { FaGithub } from "react-icons/fa";
 
 export const GitHubButton = () => {
 	return (
@@ -15,7 +14,7 @@ export const GitHubButton = () => {
             "
 			whileTap={{ scale: 0.95 }}
 		>
-			<FontAwesomeIcon icon={faGithub} />
+			<FaGithub />
 			<span className="ml-[8px] hidden sm:inline-block">GitHub</span>
 		</motion.a>
 	);
