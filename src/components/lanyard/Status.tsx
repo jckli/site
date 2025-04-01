@@ -17,9 +17,9 @@ export const Status = (props: any) => {
 				show={data != undefined}
 				enter="ease-out duration-100 min-h-full"
 				enterFrom="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-[0.98]"
-				enterTo="opacity-100 translate-y-0 sm:scale-100 h-full"
+				enterTo="opacity-100 translate-y-0 sm:scale-100 min-h-full"
 				leave="ease-in duration-200 min-h-full"
-				leaveFrom="opacity-100 translate-y-0 sm:scale-100 h-full"
+				leaveFrom="opacity-100 translate-y-0 sm:scale-100 min-h-full"
 				leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-[0.98]"
 			>
 				<div
@@ -33,7 +33,7 @@ export const Status = (props: any) => {
 						}[status]
 					)}
 				>
-					<div className="scale-[0.9] sm:scale-[1.5] space-y-1 text-center flex items-center flex-col">
+					<div className="scale-[1.5] space-y-1 text-center flex items-center flex-col">
 						<p className="scale-[1.6]">
 							<FaDiscord />
 						</p>

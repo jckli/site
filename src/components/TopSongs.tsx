@@ -17,7 +17,9 @@ export const TopSongs = (props: any) => {
 						Top Spotify Songs
 					</h1>
 					<div className="mt-2 flex gap-4 w-full overflow-x-auto">
-						<p className="text-text-color font-metropolis">Failed to load top songs. Please retry later.</p>
+						<p className="text-text-color font-metropolis">
+							Failed to load top songs. Please retry later.
+						</p>
 					</div>
 				</div>
 			</div>
@@ -43,10 +45,17 @@ export const TopSongs = (props: any) => {
 						</h1>
 						<div className="mt-2 flex gap-4 w-full overflow-x-auto">
 							{data.data.items.map((song: any) => (
-								<a key={song.id} href={song.external_urls.spotify} className="w-fit">
+								<a
+									key={song.id}
+									href={song.external_urls.spotify}
+									className="w-fit"
+								>
 									<div className="group w-[170px] relative h-full">
 										<div
-											style={{ width: 170, height: 170 }}
+											style={{
+												width: 170,
+												height: 170,
+											}}
 											className="z-10 cursor-pointer flex flex-col transition-color duration-200 rounded-lg bg-transparent group-hover:bg-black group-hover:bg-gradient-to-t group-hover:from-black group-hover:to-transparent group-hover:bg-transparent absolute"
 										>
 											<div className="absolute bottom-3 px-2 transition-all duration-200 text-transparent group-hover:text-white">
@@ -54,7 +63,16 @@ export const TopSongs = (props: any) => {
 													{song.name}
 												</h4>
 												<p className="text-md font-metropolis leading-5 w-36 text-ellipsis whitespace-nowrap overflow-hidden">
-													{song.artists.map((artist: any) => artist.name).join(", ")}
+													{song.artists
+														.map(
+															(
+																artist: any
+															) =>
+																artist.name
+														)
+														.join(
+															", "
+														)}
 												</p>
 											</div>
 										</div>
@@ -62,10 +80,20 @@ export const TopSongs = (props: any) => {
 											<Image
 												fill
 												alt={song.name}
-												src={song.album.images[0].url}
+												src={
+													song.album
+														.images[0]
+														.url
+												}
 												placeholder="blur"
-												style={{ objectFit: "cover" }}
-												blurDataURL={song.album.images[2].url}
+												style={{
+													objectFit: "cover",
+												}}
+												blurDataURL={
+													song.album
+														.images[2]
+														.url
+												}
 												className="rounded-lg"
 											/>
 										</div>
