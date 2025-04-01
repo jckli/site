@@ -48,7 +48,7 @@ interface OnedriveApiResponse {
 
 const breakpointColumnsObj = {
 	default: 4,
-	1200: 3,
+	1100: 3,
 	700: 2,
 	375: 1,
 };
@@ -78,8 +78,8 @@ export default function ProjectsPage() {
 	if (!data) {
 		return (
 			<>
-				<div className="w-full text-center mt-24">
-					<h1 className="relative font-metropolis-bold text-text-lighter text-xl w-auto">
+				<div className="w-full text-center mt-24 ">
+					<h1 className="relative font-metropolis-bold text-text-lighter text-xl">
 						Loading pictures...
 					</h1>
 					<p className="text-text-color font-metropolis">They&apos;re cool. I swear.</p>

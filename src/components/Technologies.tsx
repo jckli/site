@@ -27,7 +27,6 @@ import {
 	SiTailwindcss,
 	SiTypescript,
 	SiUbuntu,
-	SiVisualstudiocode,
 } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
 
@@ -62,7 +61,6 @@ export const Technologies = (props: any) => {
 					<SiGit size="28" />
 					<SiGithub size="28" />
 					<SiCloudflare size="28" />
-					<SiVisualstudiocode size="28" />
 					<SiDiscord size="28" />
 				</div>
 			</div>

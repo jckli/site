@@ -13,7 +13,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 			<Head />
 			<body>
 				<div className="flex items-center justify-center">
-					<div className="py-20 px-8 xl:px-10 lg:flex max-w-full lg:max-w-[1250px]">
+					<div className="py-20 px-8 xl:px-10 lg:flex w-full lg:w-[1280px]">
 						<div>
 							<div className="bg-box border-[1px] border-borcol rounded-2xl">
 								<div className="p-8 font-metropolis lg:w-[22rem]">
@@ -49,7 +49,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 											<FaGithub size={24} />
 										</IconButton>
 
-										<IconButton href="https://www.linkedin.com/in/jackhli/">
+										<IconButton href="https://www.linkedin.com/in/jckli/">
 											<FaLinkedin size={24} />
 										</IconButton>
 									</div>
