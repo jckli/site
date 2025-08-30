@@ -52,7 +52,7 @@ function NavigationMenuItem({ className, ...props }: React.ComponentProps<typeof
 }
 
 const navigationMenuTriggerStyle = cva(
-	"group inline-flex h-10 w-max items-center justify-center rounded-lg px-4 py-2 text-sm font-medium transition-all outline-none hover:bg-[#1A1C1F] hover:text-text-lighter focus:bg-[#232627] focus:outline-none focus:hover:text-text-lighter focus:text-text-color disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-[#232627] data-[state=open]:bg-slate-100/50 dark:bg-slate-950 dark:hover:bg-slate-800 dark:hover:text-slate-50 dark:focus:bg-slate-800 dark:focus:text-slate-50 dark:data-[active]:bg-slate-800/50 dark:data-[state=open]:bg-slate-800/50"
+	"group inline-flex h-10 w-max items-center justify-center rounded-lg px-4 py-2 text-sm font-medium transition-all outline-none hover:bg-[#1A1C1F] hover:text-text-lighter focus:bg-[#232627] focus:outline-none focus:hover:text-text-lighter focus:text-text-color disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-[#313436]/65 data-[state=open]:bg-slate-100/50 dark:bg-slate-950 dark:hover:bg-slate-800 dark:hover:text-slate-50 dark:focus:bg-slate-800 dark:focus:text-slate-50 dark:data-[active]:bg-slate-800/50 dark:data-[state=open]:bg-slate-800/50"
 );
 
 function NavigationMenuTrigger({

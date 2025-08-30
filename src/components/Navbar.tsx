@@ -19,7 +19,7 @@ export const Navbar = (props: any) => {
 				<NavigationMenu>
 					<NavigationMenuList className="text-text-color font-metropolis-bold">
 						<NavigationMenuItem>
-							<Link href="/" legacyBehavior passHref>
+							<Link href="/" passHref>
 								<NavigationMenuLink
 									active={"/" === pathname}
 									className={navigationMenuTriggerStyle()}
@@ -29,7 +29,7 @@ export const Navbar = (props: any) => {
 							</Link>
 						</NavigationMenuItem>
 						<NavigationMenuItem>
-							<Link href="/projects" legacyBehavior passHref>
+							<Link href="/projects" passHref>
 								<NavigationMenuLink
 									active={"/projects" === pathname}
 									className={navigationMenuTriggerStyle()}
@@ -39,7 +39,7 @@ export const Navbar = (props: any) => {
 							</Link>
 						</NavigationMenuItem>
 						<NavigationMenuItem>
-							<Link href="/photos" legacyBehavior passHref>
+							<Link href="/photos" passHref>
 								<NavigationMenuLink
 									active={"/photos" === pathname}
 									className={navigationMenuTriggerStyle()}
