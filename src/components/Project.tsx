@@ -7,7 +7,7 @@ import { FaLink, FaGithub } from "react-icons/fa";
 export const Project = (props: any) => {
 	return (
 		<>
-			<div className="bg-box border-[1px] border-borcol rounded-xl font-metropolis">
+			<div className="bg-box/70 border-[1px] border-borcol rounded-xl font-metropolis">
 				<div className="p-5 mmlg:max-w-[360px]">
 					<div className="flex items-center">
 						<Image

@@ -6,16 +6,21 @@ import { Activity } from "@/components/lanyard/Activity";
 import { FaEnvelope } from "react-icons/fa";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import Head from "./head";
+import Gradient from "@/components/gradient/gradient-importer";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
 		<html lang="en">
 			<Head />
 			<body>
+				<div
+					className={`fixed left-0 top-0 w-screen h-screen bg-mainbg transition-opacity duration-1000 -z-30`}
+				/>
+				<Gradient />
 				<div className="flex items-center justify-center">
 					<div className="py-20 px-8 xl:px-10 lg:flex w-full lg:w-[1280px]">
 						<div>
-							<div className="bg-box border-[1px] border-borcol rounded-2xl">
+							<div className="bg-box/70 border-[1px] border-borcol rounded-2xl">
 								<div className="p-8 font-metropolis lg:w-[22rem]">
 									<Image
 										src="https://avatars.githubusercontent.com/u/39673993"

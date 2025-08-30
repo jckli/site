@@ -11,7 +11,7 @@ export default function Home() {
 					<CurrentTime />
 				</div>
 				<div className="col-span-3 sm:col-span-4 h-full">
-					<div className="h-full rounded-xl p-4 border-[1px] border-borcol bg-box min-h-[13rem]">
+					<div className="h-full rounded-xl p-4 border-[1px] border-borcol bg-box/70 min-h-[13rem]">
 						<h1 className="text-xl text-text-lighter font-metropolis-bold">
 							Who am I?
 						</h1>

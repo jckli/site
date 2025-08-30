@@ -26,10 +26,10 @@ export const Status = (props: any) => {
 					className={classNames(
 						"min-h-[13vh] h-full md:min-h-[248px] w-full flex items-center justify-center rounded-lg",
 						{
-							online: "bg-green-500 text-white",
-							idle: "bg-orange-400 text-white ",
-							dnd: "bg-red-500 text-white ",
-							offline: "bg-[#5865F2] text-white",
+							online: "bg-green-500/60 text-white",
+							idle: "bg-orange-400/60 text-white ",
+							dnd: "bg-red-500/60 text-white ",
+							offline: "bg-[#5865F2]/60 text-white",
 						}[status]
 					)}
 				>

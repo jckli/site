@@ -2,8 +2,6 @@
 
 import {
 	NavigationMenu,
-	NavigationMenuContent,
-	NavigationMenuIndicator,
 	NavigationMenuItem,
 	NavigationMenuLink,
 	NavigationMenuList,
@@ -17,12 +15,15 @@ export const Navbar = (props: any) => {
 
 	return (
 		<>
-			<div className="flex-grow py-2 px-2 border-[1px] border-borcol rounded-xl">
+			<div className="flex-grow py-2 px-2 border-[1px] border-borcol bg-box/70 rounded-xl">
 				<NavigationMenu>
 					<NavigationMenuList className="text-text-color font-metropolis-bold">
 						<NavigationMenuItem>
 							<Link href="/" legacyBehavior passHref>
-								<NavigationMenuLink active={"/" === pathname} className={navigationMenuTriggerStyle()}>
+								<NavigationMenuLink
+									active={"/" === pathname}
+									className={navigationMenuTriggerStyle()}
+								>
 									Home
 								</NavigationMenuLink>
 							</Link>

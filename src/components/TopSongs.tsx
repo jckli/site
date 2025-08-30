@@ -11,7 +11,7 @@ export const TopSongs = (props: any) => {
 
 	if (error) {
 		return (
-			<div className="h-full rounded-lg min-h-[13rem] bg-box border-[1px] border-borcol w-full">
+			<div className="h-full rounded-lg min-h-[13rem] bg-box/70 border-[1px] border-borcol w-full">
 				<div className="p-5 w-full">
 					<h1 className="relative font-metropolis-bold text-text-lighter text-xl w-auto">
 						Top Spotify Songs
@@ -38,7 +38,7 @@ export const TopSongs = (props: any) => {
 				leaveFrom="opacity-100 translate-y-0 sm:scale-100"
 				leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-[0.98]"
 			>
-				<div className="h-full rounded-lg min-h-[13rem] bg-box border-[1px] border-borcol w-full">
+				<div className="h-full rounded-lg min-h-[13rem] bg-box/70 border-[1px] border-borcol w-full">
 					<div className="p-5 w-full">
 						<h1 className="relative font-metropolis-bold text-text-lighter text-xl w-auto">
 							Top Spotify Songs

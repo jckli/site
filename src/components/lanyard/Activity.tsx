@@ -19,7 +19,7 @@ export const Activity = () => {
 			leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
 		>
 			{data && data.activities.length > 0 && (
-				<div className="mt-8 bg-box rounded-2xl border-[1px] border-borcol">
+				<div className="mt-8 bg-box/70 rounded-2xl border-[1px] border-borcol">
 					<div className="px-5 py-4">
 						<div className="flex flex-col text-text-color gap-3">
 							{data.listening_to_spotify && data.activities[0].type === 2 && (
@@ -35,7 +35,7 @@ export const Activity = () => {
 												data.spotify!
 													.album_art_url
 													? data.spotify!
-														.album_art_url
+															.album_art_url
 													: "https://avatars.githubusercontent.com/u/39673993"
 											}
 											width={80}
