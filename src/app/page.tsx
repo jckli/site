@@ -1,6 +1,5 @@
 import { CurrentTime } from "@/components/CurrentTime";
 import { Status } from "@/components/lanyard/Status";
-import { Technologies } from "@/components/Technologies";
 import { TopSongs } from "@/components/TopSongs";
 
 export default function Home() {
