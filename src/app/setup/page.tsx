@@ -8,9 +8,9 @@ export default function ProjectsPage() {
 					my setup environment, for the people who care.
 				</p>
 				<p className="text-text-color mt-2 mb-6">
-					Here&apos;s a list of hardware and software that I use on a daily basis. There's
-					probably some objective reasoning behind my picks, so let me know if you wanna
-					chat or ask questions about it.
+					Here&apos;s a list of hardware and software that I use on a daily basis.
+					There&apos;s probably some objective reasoning behind my picks, so let me know
+					if you wanna chat or ask questions about it.
 				</p>
 				<h2 className="text-lg text-text-lighter font-metropolis-bold mb-1">Preface</h2>
 				<p className="text-text-color">
@@ -45,8 +45,8 @@ export default function ProjectsPage() {
 						as the base theme.
 					</li>
 					<li>
-						I really like using Apple's SF Mono font (Nerd font patched) for coding.
-						I have a patched version somewhere on my GitHub.
+						I really like using Apple&apos;s SF Mono font (Nerd font patched) for
+						coding. I have a patched version somewhere on my GitHub.
 					</li>
 					<li>
 						For terminal application, I use{" "}
@@ -120,7 +120,7 @@ export default function ProjectsPage() {
 							href="https://www.logitechg.com/en-us/shop/p/pro-wireless-mouse"
 							text="Logitech G Pro Wireless"
 						/>{" "}
-						mouse for everything. If I need a "mouse" for MacOS, I use a{" "}
+						mouse for everything. If I need a &quot;mouse&quot; for MacOS, I use a{" "}
 						<InlineLink
 							href="https://www.apple.com/shop/product/mxk93am/a/magic-trackpad-usb%E2%80%91c-white-multi-touch-surface"
 							text="Magic Trackpad"
@@ -169,7 +169,7 @@ export default function ProjectsPage() {
 							text="NVIDIA RTX 5070"
 						/>
 						. The case is a S300 case from KXRORS (this has a lot of names so just
-						search up "S300 case" on Amazon).
+						search up &quot;S300 case&quot; on Amazon).
 					</li>
 					<li>
 						My homelab server is just a simple{" "}
@@ -227,7 +227,7 @@ export default function ProjectsPage() {
 							href="https://us.focusrite.com/products/scarlett-solo"
 							text="Focusrite Scarlett Solo"
 						/>{" "}
-						audio interface. My speakers and IEM's are both plugged into this as the
+						audio interface. My speakers and IEMs are both plugged into this as the
 						DAC.
 					</li>
 					<li>
