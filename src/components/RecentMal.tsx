@@ -156,7 +156,7 @@ export const RecentMal = () => {
 			</div>
 
 			<Transition appear show={isOpen} as={Fragment}>
-				<Dialog as="div" className="relative z-50" onClose={closeModal}>
+				<Dialog as="div" className="relative z-50 outline-none" onClose={closeModal}>
 					<TransitionChild
 						as={Fragment}
 						enter="ease-out duration-200"
