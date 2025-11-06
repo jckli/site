@@ -9,6 +9,26 @@ const fetcher = (url: string) => fetch(url).then(res => res.json());
 export const TopSongs = (props: any) => {
 	const { data, error } = useSWRImmutable("/api/topsongs?time_range=short_term&limit=10", fetcher);
 
+	if (!data) {
+		return (
+			<div className="h-full rounded-lg min-h-[13rem] bg-box/70 border-[1px] border-borcol w-full">
+				<div className="p-5 w-full">
+					<h1 className="relative font-metropolis-bold text-text-lighter text-xl w-auto">
+						Top Spotify Songs
+					</h1>
+					<div className="mt-2 flex gap-4 w-full overflow-x-auto">
+						{Array.from({ length: 5 }).map((_, index) => (
+							<div
+								key={index}
+								className="animate-pulse bg-gray-600/50 rounded-lg h-[170px] w-[170px] flex-shrink-0"
+							></div>
+						))}
+					</div>
+				</div>
+			</div>
+		);
+	}
+
 	if (error) {
 		return (
 			<div className="h-full rounded-lg min-h-[13rem] bg-box/70 border-[1px] border-borcol w-full">

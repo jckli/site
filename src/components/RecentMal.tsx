@@ -84,11 +84,11 @@ export const RecentMal = () => {
 		return (
 			<div className="h-full rounded-lg min-h-[13rem] bg-box/70 border-[1px] border-borcol w-full flex flex-row gap-4 p-4">
 				<div className="animate-pulse w-28 flex-shrink-0 bg-gray-600/50 rounded-md"></div>
-				<div className="animate-pulse flex-1 flex flex-col">
-					<div>
-						<div className="h-6 bg-gray-600/50 rounded w-1/2"></div>
-					</div>
-					<div className="mt-2">
+				<div className="flex-1 flex flex-col">
+					<h1 className="relative font-metropolis-bold text-text-lighter text-xl w-auto">
+						Recent Anime/Manga
+					</h1>
+					<div className="animate-pulse mt-2">
 						<div className="h-5 bg-gray-600/50 rounded w-full mb-2"></div>
 						<div className="h-5 bg-gray-600/50 rounded w-10/12 mb-2"></div>
 						<div className="h-4 bg-gray-600/50 rounded w-1/2 mt-1"></div>
@@ -103,7 +103,7 @@ export const RecentMal = () => {
 			<div className="h-full rounded-lg min-h-[13rem] bg-box/70 border-[1px] border-borcol w-full">
 				<div className="p-5 w-full">
 					<h1 className="relative font-metropolis-bold text-text-lighter text-xl w-auto">
-						Recent MAL Activity
+						Recent Anime/Manga
 					</h1>
 					<div className="mt-2">
 						<p className="text-text-color font-metropolis">
