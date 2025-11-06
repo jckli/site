@@ -115,12 +115,13 @@ export default function ProjectsPage() {
 					<div key={image.name}>
 						<Image
 							alt={image.name}
-							src={image["@microsoft.graph.downloadUrl"]}
-							width={image.image.width}
-							height={image.image.height}
+							src={image.thumbnails[0].large.url}
+							width={image.thumbnails[0].large.width}
+							height={image.thumbnails[0].large.height}
 							className="rounded-lg"
 							placeholder="blur"
 							blurDataURL={image.thumbnails[0].small.url}
+							unoptimized={true}
 						/>
 					</div>
 				))}

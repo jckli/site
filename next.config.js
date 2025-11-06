@@ -27,6 +27,12 @@ module.exports = {
 				port: "",
 				pathname: "/**",
 			},
+			{
+				protocol: "https",
+				hostname: "*.svc.ms",
+				port: "",
+				pathname: "/**",
+			},
 		],
 		minimumCacheTTL: 604800,
 	},
