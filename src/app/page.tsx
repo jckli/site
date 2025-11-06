@@ -1,6 +1,7 @@
 import { CurrentTime } from "@/components/CurrentTime";
 import { Status } from "@/components/lanyard/Status";
 import { TopSongs } from "@/components/TopSongs";
+import { RecentMal } from "@/components/RecentMal";
 
 export default function Home() {
 	return (
@@ -31,6 +32,9 @@ export default function Home() {
 				</div>
 				<div className="col-span-1 min-h-full">
 					<Status />
+				</div>
+				<div className="col-span-6 h-full">
+					<RecentMal />
 				</div>
 			</div>
 		</>
