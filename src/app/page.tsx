@@ -2,6 +2,7 @@ import { CurrentTime } from "@/components/CurrentTime";
 import { Status } from "@/components/lanyard/Status";
 import { TopSongs } from "@/components/TopSongs";
 import { RecentMal } from "@/components/RecentMal";
+import { RecentValorant } from "@/components/ValorantStats";
 
 export default function Home() {
 	return (
@@ -33,8 +34,11 @@ export default function Home() {
 				<div className="col-span-1 min-h-full">
 					<Status />
 				</div>
-				<div className="col-span-6 h-full">
+				<div className="col-span-6 md:col-span-3 h-full">
 					<RecentMal />
+				</div>
+				<div className="col-span-6 md:col-span-3 h-full">
+					<RecentValorant />
 				</div>
 			</div>
 		</>
