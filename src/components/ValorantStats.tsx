@@ -243,8 +243,6 @@ const MatchScoreboard = ({ match }: { match: ValorantMatchResponse["data"][0] })
 	);
 };
 
-// --- Main Component ---
-
 export const RecentValorant = () => {
 	const [isOpen, setIsOpen] = useState(false);
 	const [expandedMatchIdx, setExpandedMatchIdx] = useState<number | null>(null);
@@ -258,14 +256,17 @@ export const RecentValorant = () => {
 	const rank = rankData?.data?.current;
 	const lastMatch = matchData?.data?.[0];
 	const accentColor = rank?.tier?.rank_color || "#ffffff";
-	const bgColor = rank?.tier?.rank_background_color || "#181a1b";
+	const bgColor = rank?.tier?.rank_background_color || "#000000";
 
 	return (
 		<>
 			<div
-				className="h-full rounded-lg min-h-[13rem] w-full cursor-pointer group bg-box/70 border-[1px] border-borcol overflow-hidden flex flex-col p-4 relative transition-all hover:bg-box/90"
+				className="h-full rounded-lg min-h-[13rem] w-full cursor-pointer group bg-box/70 border-[1px] border-borcol overflow-hidden flex flex-col p-4 relative transition-all hover:bg-box/80"
 				onClick={() => setIsOpen(true)}
-				style={{ background: `${bgColor}80`, borderColor: `${accentColor}30` }}
+				style={{
+					background: bgColor === "#000000" ? undefined : `${bgColor}80`,
+					borderColor: `${accentColor}30`,
+				}}
 			>
 				<h1 className="font-metropolis-bold text-text-lighter text-xl drop-shadow-md z-10">
 					Valorant Stats
