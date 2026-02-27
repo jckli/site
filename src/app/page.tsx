@@ -17,7 +17,7 @@ export default function Home() {
 							Who am I?
 						</h1>
 						<p className="text-text-color mt-2">
-							I&apos;m currently a computer science major at Arizona State
+							I recently graduated summa cum laude at Arizona State
 							University. I like creating cool things in my free time using
 							modern, efficient, and scalable technologies.
 						</p>
