@@ -184,11 +184,24 @@ const MatchScoreboard = ({ match }: { match: ValorantMatchResponse["data"][0] })
 												)}
 											</div>
 										</td>
+
 										<td className="py-2 pl-3">
-											<div className="flex items-center gap-1">
+											<a
+												href={`https://tracker.gg/valorant/profile/riot/${encodeURIComponent(
+													player.name
+												)}%23${encodeURIComponent(
+													player.tag
+												)}/overview`}
+												target="_blank"
+												rel="noopener noreferrer"
+												onClick={e =>
+													e.stopPropagation()
+												}
+												className="flex items-center gap-1 group/link"
+											>
 												<span
 													className={clsx(
-														"font-metropolis-bold text-sm truncate",
+														"font-metropolis-bold text-sm truncate group-hover/link:underline",
 														team.id ===
 															"Blue"
 															? "text-cyan-200"
@@ -197,10 +210,10 @@ const MatchScoreboard = ({ match }: { match: ValorantMatchResponse["data"][0] })
 												>
 													{player.name}
 												</span>
-												<span className="text-text-darker text-[10px] hidden sm:inline">
+												<span className="text-text-darker text-[10px] hidden sm:inline group-hover/link:text-text-color transition-colors">
 													#{player.tag}
 												</span>
-											</div>
+											</a>
 										</td>
 										{isCompetitive && (
 											<td className="py-2">
