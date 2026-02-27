@@ -2,7 +2,7 @@ import { CurrentTime } from "@/components/CurrentTime";
 import { Status } from "@/components/lanyard/Status";
 import { TopSongs } from "@/components/TopSongs";
 import { RecentMal } from "@/components/RecentMal";
-import { RecentValorant } from "@/components/ValorantStats";
+import { RecentValorant } from "@/components/valorant/ValorantStats";
 
 export default function Home() {
 	return (
