@@ -7,8 +7,6 @@ import { X, ChevronDown, ChevronUp } from "lucide-react";
 import clsx from "clsx";
 import Image from "next/image";
 
-// --- Interfaces reflecting your optimized Go backend ---
-
 interface ValorantRankResponse {
 	status: number;
 	data: {
@@ -555,7 +553,7 @@ export const RecentValorant = () => {
 																				stats.damage_delta_per_round >
 																					0
 																					? "text-emerald-400"
-																					: "text-text-lighter"
+																					: "text-red-400"
 																			)}
 																		>
 																			{stats.damage_delta_per_round >
