@@ -111,8 +111,8 @@ export default function ProjectsPage() {
 				<h2 className="text-lg text-text-lighter font-metropolis-bold mt-4 mb-1">Desk Setup</h2>
 				<ul className="list-disc list-inside text-text-color">
 					<li>
-						My monitors are an MSI G274QPF E2 (1440p, 27in, 180hz) and a BenQ GW2480
-						(1080p, 24in, overclocked to 75hz).
+						My monitors are an MSI G274QPF E2 (1440p, 27in, 180hz) and a Dell
+						U3818DW (1600p, 38in, overclocked to 75hz).
 					</li>
 					<li>
 						I use a{" "}
@@ -160,8 +160,8 @@ export default function ProjectsPage() {
 					<li>
 						My main PC is a small form factor (SFF) build with a{" "}
 						<InlineLink
-							href="https://www.intel.com/content/www/us/en/products/sku/236799/intel-core-i5-processor-14600k-24m-cache-up-to-5-30-ghz/specifications.html"
-							text="Intel Core i5-14600k"
+							href="https://www.amd.com/en/products/processors/desktops/ryzen/9000-series/amd-ryzen-7-9700x.html"
+							text="AMD Ryzen 7 9700x"
 						/>{" "}
 						+ 64GB ram +{" "}
 						<InlineLink
@@ -203,10 +203,23 @@ export default function ProjectsPage() {
 						/>
 						, powered by a{" "}
 						<InlineLink
-							href="https://pioneerhomeusa.com/xc-hm86"
-							text="Pioneer XC-HM86"
+							href="https://doukaudio.com/products/douk-audio-a5-tpa3255-stereo-amp-hifi-audio-class-d-amplifier-high-pass-filter"
+							text="Douk Audio A5"
 						/>{" "}
-						amp/reciever.
+						amp.
+					</li>
+					<li>
+						For headphones, I use the{" "}
+						<InlineLink
+							href="https://drop.com/buy/massdrop-sennheiser-hd6xx"
+							text="Massdrop x Sennheiser HD 6XX"
+						/>
+						, powered by a{" "}
+						<InlineLink
+							href="https://www.toppingaudio.com/product-item/l30-ii"
+							text="Topping L30 II"
+						/>{" "}
+						amp.
 					</li>
 					<li>
 						For IEMs, I use the really nice{" "}
@@ -227,8 +240,13 @@ export default function ProjectsPage() {
 							href="https://us.focusrite.com/products/scarlett-solo"
 							text="Focusrite Scarlett Solo"
 						/>{" "}
-						audio interface. My speakers and IEMs are both plugged into this as the
-						DAC.
+						audio interface.
+					</li>
+					<li>
+						My audio setup goes from my computer &gt; Focusrite Scarlett Solo as a
+						DAC &gt; Topping L30 II as AMP for headphones and IEMs &gt; Douk Audio
+						A5 as AMP for speakers. The Topping L30 II allows for easy switching
+						between the headphones and speakers with the output switch.
 					</li>
 					<li>
 						On the go, I whip out my{" "}
