@@ -20,7 +20,7 @@ export default function ProjectsPage() {
 					<Project
 						name="MangaUpdates Bot"
 						src="/projects/mangaupdates-bot.png"
-						lang="Python"
+						lang="Go, Rust"
 						description="Track your favorite mangas, manhwas, or doujins and get every new chapter update sent to you!"
 						button_link="https://tsuuchi.hayasaka.moe/"
 						button_text="Invite"
@@ -38,7 +38,7 @@ export default function ProjectsPage() {
 					<Project
 						name="Retrievify"
 						src="/projects/retrievify.png"
-						lang="TypeScript, Python"
+						lang="TypeScript, Go"
 						description="Get insights into all your listening statistics and see how you've spent your time listening to music."
 						button_link="https://retrievify.hayasaka.moe/"
 						button_text="Visit"
