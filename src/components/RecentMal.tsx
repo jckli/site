@@ -129,9 +129,10 @@ export const RecentMal = () => {
 					<Image
 						fill
 						alt={mostRecent.node.title}
-						src={mostRecent.node.main_picture.large}
+						src={mostRecent.node.main_picture.medium}
 						style={{ objectFit: "cover" }}
 						className="rounded-md transition-transform duration-300 group-hover:scale-105"
+						unoptimized={true}
 					/>
 					<span className="absolute top-1 left-1 bg-black/70 text-white text-xs font-metropolis-bold py-1 px-2 rounded-md">
 						{mostRecent.type.toUpperCase()}

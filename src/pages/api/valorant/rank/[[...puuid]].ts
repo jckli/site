@@ -5,8 +5,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 	const { puuid } = req.query;
 	const puuidStr = Array.isArray(puuid) ? puuid[0] : puuid;
 	const fetchUrl = puuidStr
-		? `https://api.jackli.dev/valorant/rank/${puuidStr}`
-		: `https://api.jackli.dev/valorant/rank`;
+		? `https://gomapi.hayasaka.moe/personal/valorant/rank/${puuidStr}`
+		: `https://gomapi.hayasaka.moe/personal/valorant/rank`;
 
 	try {
 		const response = await fetch(fetchUrl);
