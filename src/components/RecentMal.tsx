@@ -34,7 +34,7 @@ const formatRelativeDate = (dateString: string) => {
 };
 
 const normalizeMalItem = (item: any) => {
-	const entry = item.type === "anime" ? item.anime_entry : item.manga_entry;
+	const entry = item.data;
 	const node = entry.node;
 	const listStatus = entry.list_status;
 	const url = `https://myanimelist.net/${item.type}/${node.id}`;
@@ -115,7 +115,7 @@ export const RecentMal = () => {
 		);
 	}
 
-	const allItems = data.data.data.map(normalizeMalItem);
+	const allItems = data.data.map(normalizeMalItem);
 	const mostRecent = allItems[0];
 
 	return (

@@ -64,7 +64,7 @@ export const TopSongs = (props: any) => {
 							Top Spotify Songs
 						</h1>
 						<div className="mt-2 flex gap-4 w-full overflow-x-auto">
-							{data.data.items.map((song: any) => (
+							{data.items.map((song: any) => (
 								<a
 									key={song.id}
 									href={song.external_urls.spotify}
@@ -127,8 +127,3 @@ export const TopSongs = (props: any) => {
 		</>
 	);
 };
-
-function getSpotifyTopSongs() {
-	const res = fetch(`https://api.jackli.dev/spotify/top-items/tracks?time_range=short_term&limit=10`);
-	return res;
-}
