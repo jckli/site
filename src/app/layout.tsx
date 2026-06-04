@@ -43,7 +43,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 										</a>
 									</div>
 									<p className="text-base text-text-color">
-										CS @ ASU. I create cool things using
+										SDE @ AWS. I create cool things using
 										code.
 									</p>
 									<div className="mt-4 flex gap-4">

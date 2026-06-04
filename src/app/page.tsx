@@ -17,9 +17,9 @@ export default function Home() {
 							Who am I?
 						</h1>
 						<p className="text-text-color mt-2">
-							I recently graduated summa cum laude at Arizona State
-							University. I like creating cool things in my free time using
-							modern, efficient, and scalable technologies.
+							Currently, I work at AWS on the EC2 Infrastructure Services org.
+							I like creating cool things in my free time using modern,
+							efficient, and scalable technologies.
 						</p>
 						<p className="text-text-color mt-2">
 							When I&apos;m not coding, you can catch me grabbing boba with
