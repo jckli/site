@@ -17,19 +17,13 @@ module.exports = {
 			},
 			{
 				protocol: "https",
-				hostname: "22ygx5-my.sharepoint.com",
+				hostname: "lh3.googleusercontent.com",
 				port: "",
 				pathname: "/**",
 			},
 			{
 				protocol: "https",
 				hostname: "cdn.myanimelist.net",
-				port: "",
-				pathname: "/**",
-			},
-			{
-				protocol: "https",
-				hostname: "*.svc.ms",
 				port: "",
 				pathname: "/**",
 			},
