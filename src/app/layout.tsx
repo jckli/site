@@ -14,7 +14,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 			<Head />
 			<body>
 				<div
-					className={`fixed left-0 top-0 w-screen h-screen bg-mainbg transition-opacity duration-1000 -z-30`}
+					className="fixed inset-0 bg-mainbg transition-opacity duration-1000 -z-30"
 				/>
 				<Gradient />
 				<div className="flex items-center justify-center">

@@ -608,6 +608,7 @@ class Gradient {
 			}),
 			e(this, "resize", () => {
 				(this.width = window.innerWidth),
+					(this.height = window.innerHeight),
 					this.minigl.setSize(this.width, this.height),
 					this.minigl.setOrthographicCamera(),
 					(this.xSegCount = Math.ceil(this.width * this.conf.density[0])),

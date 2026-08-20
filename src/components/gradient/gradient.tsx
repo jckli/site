@@ -86,7 +86,7 @@ const GradientReact = () => {
 		<>
 			<div
 				ref={overlayRef}
-				className={`fixed left-0 top-0 w-screen h-screen bg-mainbg transition-opacity duration-1000 -z-10`}
+				className="fixed inset-0 bg-mainbg transition-opacity duration-1000 -z-10"
 			/>
 			<canvas
 				id="gradient-canvas"
@@ -99,7 +99,7 @@ const GradientReact = () => {
 						"--gradient-color-4": GRADIENT_COLORS_HEX[3],
 					} as React.CSSProperties
 				}
-				className="fixed left-0 top-0 bg-transparent h-screen w-screen -z-20"
+				className="fixed inset-0 bg-transparent -z-20"
 			/>
 		</>
 	);
