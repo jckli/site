@@ -17,12 +17,15 @@
 	src: url("/fonts/SFMonoRegular.otf");
 }
 
-html,
+html {
+	min-height: 100%;
+	background: #5a3a7a;
+}
+
 body {
 	min-height: 100%;
 	padding: 0;
 	margin: 0;
-	background: #131416;
 	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans,
 		Droid Sans, Helvetica Neue, sans-serif;
 }

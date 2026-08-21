@@ -12,7 +12,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 	return (
 		<html lang="en">
 			<Head />
-			<body>
+			<body className="relative isolate">
 				<div
 					className="fixed inset-0 bg-mainbg transition-opacity duration-1000 -z-30"
 				/>
