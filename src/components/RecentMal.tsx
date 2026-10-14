@@ -5,8 +5,11 @@ import useSWRImmutable from "swr";
 import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react";
 import { Fragment, useState } from "react";
 import { X } from "lucide-react";
+import { fetchJson } from "@/lib/fetcher";
 
-const fetcher = (url: string) => fetch(url).then(res => res.json());
+interface MalResponse {
+	data: any[];
+}
 
 const formatRelativeDate = (dateString: string) => {
 	const itemDate = new Date(dateString);
@@ -75,7 +78,8 @@ const normalizeMalItem = (item: any) => {
 
 export const RecentMal = () => {
 	const [isOpen, setIsOpen] = useState(false);
-	const { data, error } = useSWRImmutable("/api/mal", fetcher);
+	const { data, error } = useSWRImmutable<MalResponse>("/api/mal", fetchJson);
+	const malItems = data?.data;
 
 	const openModal = () => setIsOpen(true);
 	const closeModal = () => setIsOpen(false);
@@ -98,7 +102,7 @@ export const RecentMal = () => {
 		);
 	}
 
-	if (error) {
+	if (error || !Array.isArray(malItems) || malItems.length === 0) {
 		return (
 			<div className="h-full rounded-lg min-h-[13rem] bg-box/70 border-[1px] border-borcol w-full">
 				<div className="p-5 w-full">
@@ -115,13 +119,13 @@ export const RecentMal = () => {
 		);
 	}
 
-	const allItems = data.data.map(normalizeMalItem);
+	const allItems = malItems.map(normalizeMalItem);
 	const mostRecent = allItems[0];
 
 	return (
 		<>
 			<div
-				className="h-full rounded-lg min-h-[13rem] w-full cursor-pointer group bg-box/70 border-[1px] border-borcol overflow-hidden 
+				className="h-full rounded-lg min-h-[13rem] w-full cursor-pointer group bg-box/70 border-[1px] border-borcol overflow-hidden
                            flex flex-row gap-4 p-4"
 				onClick={openModal}
 			>

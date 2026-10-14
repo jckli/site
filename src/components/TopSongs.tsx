@@ -3,13 +3,20 @@
 import Image from "next/image";
 import useSWRImmutable from "swr";
 import { Transition } from "@headlessui/react";
+import { fetchJson } from "@/lib/fetcher";
 
-const fetcher = (url: string) => fetch(url).then(res => res.json());
+interface TopSongsResponse {
+	items: any[];
+}
 
 export const TopSongs = (props: any) => {
-	const { data, error } = useSWRImmutable("/api/topsongs?time_range=short_term&limit=10", fetcher);
+	const { data, error } = useSWRImmutable<TopSongsResponse>(
+		"/api/topsongs?time_range=short_term&limit=10",
+		fetchJson
+	);
+	const songs = data?.items;
 
-	if (!data) {
+	if (!data && !error) {
 		return (
 			<div className="h-full rounded-lg min-h-[13rem] bg-box/70 border-[1px] border-borcol w-full">
 				<div className="p-5 w-full">
@@ -29,7 +36,7 @@ export const TopSongs = (props: any) => {
 		);
 	}
 
-	if (error) {
+	if (error || !Array.isArray(songs)) {
 		return (
 			<div className="h-full rounded-lg min-h-[13rem] bg-box/70 border-[1px] border-borcol w-full">
 				<div className="p-5 w-full">
@@ -45,8 +52,6 @@ export const TopSongs = (props: any) => {
 			</div>
 		);
 	}
-	if (!data) return <div></div>;
-
 	return (
 		<>
 			<Transition
@@ -64,7 +69,7 @@ export const TopSongs = (props: any) => {
 							Top Spotify Songs
 						</h1>
 						<div className="mt-2 flex gap-4 w-full overflow-x-auto">
-							{data.items.map((song: any) => (
+							{songs.map((song: any) => (
 								<a
 									key={song.id}
 									href={song.external_urls.spotify}
