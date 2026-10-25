@@ -48,6 +48,15 @@ function photoMetadata(photo: Photo) {
 	};
 }
 
+function syncPhotoOrientation(element: HTMLImageElement, photo: Photo) {
+	if ((element.naturalWidth > element.naturalHeight) === (photo.width > photo.height)) return;
+	const link = element.closest<HTMLAnchorElement>(".pswp-item");
+	if (!link) return;
+	link.dataset.pswpWidth = String(photo.height);
+	link.dataset.pswpHeight = String(photo.width);
+	link.dataset.dimensions = `${photo.height} × ${photo.width}`;
+}
+
 export default function PhotosPage() {
 	const galleryRef = useRef<HTMLDivElement>(null);
 	const loadMoreRef = useRef<HTMLDivElement>(null);
@@ -145,7 +154,7 @@ export default function PhotosPage() {
 				{images.map(image => {
 					const metadata = photoMetadata(image);
 					const hoverDetails = [metadata.date, metadata.settings].filter(Boolean).join(" · ");
-					const imageUrl = image.imageUrl || image.thumbnailUrl;
+					const imageUrl = image.imageUrl || image.thumbnailUrl.replace(/=[^=]+$/, "=s0");
 					return (
 						<article key={image.id} className="group relative mb-4 break-inside-avoid overflow-hidden rounded-xl border border-borcol bg-box/70">
 							<a
@@ -169,6 +178,7 @@ export default function PhotosPage() {
 									placeholder="blur"
 									blurDataURL={image.thumbnailUrl}
 									unoptimized
+									onLoad={event => syncPhotoOrientation(event.currentTarget, image)}
 								/>
 							</a>
 							<div className="pointer-events-none absolute inset-0 flex items-end bg-gradient-to-t from-mainbg/95 via-mainbg/15 to-transparent p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-within:opacity-100">
