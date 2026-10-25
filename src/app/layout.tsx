@@ -1,4 +1,5 @@
 import "../globals.css";
+import "photoswipe/style.css";
 import Image from "next/image";
 import { IconButton } from "@/components/IconButton";
 import { Navbar } from "@/components/Navbar";

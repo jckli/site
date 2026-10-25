@@ -34,6 +34,60 @@ body {
 	box-sizing: border-box;
 }
 
+.pswp__photo-info {
+	position: absolute;
+	z-index: 10;
+	left: 50%;
+	bottom: max(1.5rem, env(safe-area-inset-bottom));
+	display: grid;
+	gap: 0.2rem;
+	width: min(28rem, calc(100vw - 3rem));
+	padding: 0.8rem 0.9rem;
+	border: 1px solid rgb(255 255 255 / 0.12);
+	border-radius: 0.9rem;
+	background: rgb(24 26 27 / 0.84);
+	box-shadow: 0 12px 32px rgb(0 0 0 / 0.28);
+	color: #d3d3d3;
+	font-family: MetropolisRegular, sans-serif;
+	backdrop-filter: blur(14px);
+	transform: translateX(-50%);
+}
+
+.pswp__photo-title,
+.pswp__photo-details,
+.pswp__photo-settings {
+	margin: 0;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.pswp__photo-details:empty,
+.pswp__photo-settings:empty {
+	display: none;
+}
+
+.pswp__photo-title {
+	font-family: MetropolisBold, sans-serif;
+	font-size: 0.875rem;
+}
+
+.pswp__photo-details,
+.pswp__photo-settings {
+	color: #9199a0;
+	font-size: 0.75rem;
+}
+
+@media (max-width: 640px) {
+	.pswp__photo-info {
+		right: max(1rem, env(safe-area-inset-right));
+		left: max(1rem, env(safe-area-inset-left));
+		bottom: max(1rem, env(safe-area-inset-bottom));
+		width: auto;
+		transform: none;
+	}
+}
+
 :root {
 	--sidebar: hsl(0 0% 98%);
 	--sidebar-foreground: hsl(240 5.3% 26.1%);
