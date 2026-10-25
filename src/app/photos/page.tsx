@@ -7,8 +7,8 @@ import useSWRInfinite from "swr/infinite";
 
 interface Photo {
 	id: string;
-	name: string;
 	thumbnailUrl: string;
+	imageUrl?: string;
 	width: number;
 	height: number;
 	takenAt?: string;
@@ -29,8 +29,13 @@ interface PhotosResponse {
 const fetcher = (url: string) => fetch(url).then(res => res.json());
 
 function photoMetadata(photo: Photo) {
+	const make = photo.cameraMake?.trim();
+	const model = photo.cameraModel?.trim();
+	const camera = make && model && (model.toLowerCase() === make.toLowerCase() || model.toLowerCase().startsWith(`${make.toLowerCase()} `))
+		? model
+		: [make, model].filter(Boolean).join(" ");
 	return {
-		camera: [photo.cameraMake, photo.cameraModel].filter(Boolean).join(" "),
+		camera,
 		date: photo.takenAt?.split(" ")[0].replaceAll(":", "-") ?? "",
 		settings: [
 			photo.focalLength && `${photo.focalLength} mm`,
@@ -81,11 +86,11 @@ export default function PhotosPage() {
 
 						const title = document.createElement("p");
 						title.className = "pswp__photo-title";
-						title.textContent = trigger.dataset.name || "Photo";
+						title.textContent = trigger.dataset.camera || "Photo";
 
 						const details = document.createElement("p");
 						details.className = "pswp__photo-details";
-						details.textContent = [trigger.dataset.date, trigger.dataset.camera, trigger.dataset.lens]
+						details.textContent = [trigger.dataset.date, trigger.dataset.lens]
 							.filter(Boolean)
 							.join(" · ");
 
@@ -140,46 +145,53 @@ export default function PhotosPage() {
 				{images.map(image => {
 					const metadata = photoMetadata(image);
 					const hoverDetails = [metadata.date, metadata.settings].filter(Boolean).join(" · ");
+					const imageUrl = image.imageUrl || image.thumbnailUrl;
 					return (
-						<a
-							key={image.id}
-							className="pswp-item group relative mb-4 block break-inside-avoid overflow-hidden rounded-xl border border-borcol bg-box/70 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-accent"
-							href={image.thumbnailUrl}
-							data-pswp-width={image.width}
-							data-pswp-height={image.height}
-							data-name={image.name}
-							data-date={metadata.date}
-							data-camera={metadata.camera}
-							data-lens={image.lens}
-							data-settings={metadata.settings}
-							data-dimensions={`${image.width} × ${image.height}`}
-							aria-label={`Open ${image.name}`}
-						>
-							<Image
-								alt={image.name}
-								src={image.thumbnailUrl}
-								width={image.width}
-								height={image.height}
-								className="h-auto w-full transition-transform duration-300 group-hover:scale-[1.015]"
-								placeholder="blur"
-								blurDataURL={image.thumbnailUrl}
-								unoptimized
-							/>
-							<div className="pointer-events-none absolute inset-0 flex items-end bg-gradient-to-t from-mainbg/95 via-mainbg/15 to-transparent p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100">
+						<article key={image.id} className="group relative mb-4 break-inside-avoid overflow-hidden rounded-xl border border-borcol bg-box/70">
+							<a
+								className="pswp-item block focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-pink-accent"
+								href={imageUrl}
+								data-pswp-width={image.width}
+								data-pswp-height={image.height}
+								data-date={metadata.date}
+								data-camera={metadata.camera}
+								data-lens={image.lens}
+								data-settings={metadata.settings}
+								data-dimensions={`${image.width} × ${image.height}`}
+								aria-label={`Open photo${metadata.camera ? ` taken with ${metadata.camera}` : ""}`}
+							>
+								<Image
+									alt={metadata.camera ? `Photo taken with ${metadata.camera}` : "Photo"}
+									src={image.thumbnailUrl}
+									width={image.width}
+									height={image.height}
+									className="h-auto w-full transition-transform duration-300 group-hover:scale-[1.015]"
+									placeholder="blur"
+									blurDataURL={image.thumbnailUrl}
+									unoptimized
+								/>
+							</a>
+							<div className="pointer-events-none absolute inset-0 flex items-end bg-gradient-to-t from-mainbg/95 via-mainbg/15 to-transparent p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-within:opacity-100">
 								<div className="min-w-0 text-sm">
 									<p className="truncate font-metropolis-bold text-text-lighter">
-										{metadata.camera || image.name}
+										{metadata.camera || "Photo"}
 									</p>
 									{image.lens && <p className="mt-0.5 truncate text-xs text-text-color">{image.lens}</p>}
 									<p className="mt-0.5 truncate text-xs text-text-color">
 										{hoverDetails || `${image.width} × ${image.height}`}
 									</p>
 								</div>
-								<span className="ml-auto inline-flex h-8 shrink-0 items-center rounded-full border border-pink-accent/30 bg-pink-accent/20 px-3 text-xs text-pink-accent backdrop-blur-sm">
-									View
-								</span>
+								<a
+									className="pointer-events-auto ml-auto inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-pink-accent/30 bg-pink-accent/10 text-lg text-pink-accent backdrop-blur-sm transition-colors hover:bg-pink-accent hover:text-mainbg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-accent"
+									href={imageUrl}
+									target="_blank"
+									rel="noreferrer"
+									aria-label="Open full-quality photo in a new tab"
+								>
+									↗
+								</a>
 							</div>
-						</a>
+						</article>
 					);
 				})}
 			</div>
