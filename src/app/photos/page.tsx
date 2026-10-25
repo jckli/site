@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useRef } from "react";
+import Masonry from "react-masonry-css";
 import PhotoSwipeLightbox from "photoswipe/lightbox";
 import useSWRInfinite from "swr/infinite";
 
@@ -27,6 +28,7 @@ interface PhotosResponse {
 }
 
 const fetcher = (url: string) => fetch(url).then(res => res.json());
+const masonryColumns = { default: 3, 700: 2, 480: 1 };
 
 function photoMetadata(photo: Photo) {
 	const make = photo.cameraMake?.trim();
@@ -150,13 +152,14 @@ export default function PhotosPage() {
 
 	return (
 		<>
-			<div ref={galleryRef} className="columns-1 gap-4 sm:columns-2 xl:columns-3" aria-label="Photo gallery">
-				{images.map(image => {
+			<div ref={galleryRef} aria-label="Photo gallery">
+				<Masonry breakpointCols={masonryColumns} className="flex gap-4" columnClassName="flex flex-col gap-4">
+					{images.map(image => {
 					const metadata = photoMetadata(image);
 					const hoverDetails = [metadata.date, metadata.settings].filter(Boolean).join(" · ");
 					const imageUrl = image.imageUrl || image.thumbnailUrl.replace(/=[^=]+$/, "=s0");
 					return (
-						<article key={image.id} className="group relative mb-4 break-inside-avoid overflow-hidden rounded-xl border border-borcol bg-box/70">
+						<article key={image.id} className="group relative overflow-hidden rounded-xl">
 							<a
 								className="pswp-item block focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-pink-accent"
 								href={imageUrl}
@@ -203,7 +206,8 @@ export default function PhotosPage() {
 							</div>
 						</article>
 					);
-				})}
+					})}
+				</Masonry>
 			</div>
 			{hasMore && <div ref={loadMoreRef} className="h-px" />}
 		</>
