@@ -1,51 +1,59 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import { Transition } from "@headlessui/react";
+import { useEffect, useState } from "react";
 
-function classNames(...classes: any) {
-	return classes.filter(Boolean).join(" ");
+function TimeCard({ date, label, timeZone }: { date: Date; label: string; timeZone: string }) {
+    const time = new Intl.DateTimeFormat(undefined, {
+        timeZone,
+        hour: "numeric",
+        minute: "numeric",
+        second: "numeric",
+        hourCycle: "h23",
+    }).format(date);
+    const hour = Number(new Intl.DateTimeFormat("en-US", { timeZone, hour: "numeric", hourCycle: "h23" }).format(date));
+    const nighttime = hour >= 18 || hour <= 7;
+
+    return (
+        <div
+            className={`flex min-h-0 flex-col items-center justify-center rounded-xl text-white ${
+                nighttime ? "bg-sky-900/60" : "bg-sky-300/60"
+            }`}
+        >
+            <h1 className="text-2xl">{time}</h1>
+            <p className="font-metropolis">in {label}</p>
+        </div>
+    );
 }
 
-export const CurrentTime = (props: any) => {
-	const [timeInAz, setTimeInAz] = useState("");
-	useEffect(() => {
-		const interval = setInterval(() => {
-			const AZTimeFormatter = new Intl.DateTimeFormat(undefined, {
-				timeZone: "America/Phoenix",
-				hour: "numeric",
-				minute: "numeric",
-				second: "numeric",
-				hour12: false,
-			});
-			const currentTime = AZTimeFormatter.format(new Date());
-			setTimeInAz(currentTime);
-		}, 1000);
+export const CurrentTime = () => {
+    const [date, setDate] = useState<Date>();
 
-		return () => clearInterval(interval);
-	}, []);
-	const nighttime = parseInt(timeInAz.split(":")[0]) >= 18 || parseInt(timeInAz.split(":")[0]) <= 7;
-	return (
-		<>
-			<Transition
-				show={timeInAz != ""}
-				enter="ease-out duration-200"
-				enterFrom="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-[0.98]"
-				enterTo="opacity-100 translate-y-0 sm:scale-100"
-				leave="ease-in duration-200"
-				leaveFrom="opacity-100 translate-y-0 sm:scale-100"
-				leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-[0.98]"
-			>
-				<div
-					className={classNames(
-						"h-full w-full flex flex-col items-center justify-center rounded-xl min-h-[13rem] text-white",
-						nighttime ? "bg-sky-900/60" : "bg-sky-300/60"
-					)}
-				>
-					<h1 className="text-2xl">{timeInAz}</h1>
-					<p className="font-metropolis">in arizona, us</p>
-				</div>
-			</Transition>
-		</>
-	);
+    useEffect(() => {
+        const update = () => setDate(new Date());
+        update();
+        const interval = setInterval(update, 1000);
+        return () => clearInterval(interval);
+    }, []);
+
+    return (
+        <Transition
+            show={Boolean(date)}
+            enter="ease-out duration-200"
+            enterFrom="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-[0.98]"
+            enterTo="opacity-100 translate-y-0 sm:scale-100"
+            leave="ease-in duration-200"
+            leaveFrom="opacity-100 translate-y-0 sm:scale-100"
+            leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-[0.98]"
+        >
+            <div className="grid h-full min-h-[13rem] w-full grid-rows-2 gap-3">
+                {date && (
+                    <>
+                        <TimeCard date={date} label="arizona, us" timeZone="America/Phoenix" />
+                        <TimeCard date={date} label="california, us" timeZone="America/Los_Angeles" />
+                    </>
+                )}
+            </div>
+        </Transition>
+    );
 };
